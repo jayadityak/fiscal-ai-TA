@@ -1,5 +1,7 @@
 # FiscalAI
 
+**Live demo:** https://fiscal-ai-ta-wn9k-teal.vercel.app/
+
 FiscalAI turns public investor-relations PDFs into three auditable, ten-year tables
 for Nestlé, Heineken, and Unilever. Every output covers FY2016–FY2025.
 
@@ -28,7 +30,10 @@ downloading one report per year.
 ## Frontend
 
 The read-only reviewer interface in `web/` renders the committed artifacts without
-runtime extraction, arithmetic, or LLM calls.
+runtime extraction, arithmetic, or LLM calls. It is deployed live at
+**https://fiscal-ai-ta-wn9k-teal.vercel.app/**.
+
+To run it locally:
 
 ```bash
 python3 scripts/export_frontend.py
