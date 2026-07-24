@@ -1,33 +1,26 @@
 line_item,occurrence,currency,value_kind,unit_multiplier,2016-12-31,2017-12-31,2018-12-31,2019-12-31,2020-12-31,2021-12-31,2022-12-31,2023-12-31,2024-12-31,2025-12-31
-Profit,1,EUR,currency,1000000,1739,2153,2105,2374,,,3039,2401,1161,2138
+Profit,1,EUR,currency,1000000,1739,2153,2105,2374,-88,3535,3039,2401,1161,2138
 "Amortisation, depreciation and impairments",1,EUR,currency,1000000,1817,1587,1693,1959,2874,1959,1886,3096,2605,2609
 Net interest expenses,1,EUR,currency,1000000,359,396,421,454,447,413,384,550,570,512
 Other income,1,EUR,currency,1000000,,,-75,-95,-56,-1326,-147,-352,-37,-74
-Share of profit/(loss) of associates and joint ventures and dividend income on fair value through OCI investments,1,EUR,currency,1000000,,,,,21,-256,,,687,-264
+Share of profit/(loss) of associates and joint ventures and dividend income on fair value through OCI investments,1,EUR,currency,1000000,-161,-84,-228,-173,21,-256,-230,-226,687,-264
 Income tax expenses,1,EUR,currency,1000000,673,755,741,910,245,799,1131,121,846,857
 Other non-cash items,1,EUR,currency,1000000,332,314,201,240,,231,284,537,226,131
-Cash flow from operations before changes in working capital and provisions,1,EUR,currency,1000000,4713,4980,4858,5669,,,,,6058,5909
+Cash flow from operations before changes in working capital and provisions,1,EUR,currency,1000000,4713,4980,4858,5669,3674,5154,6347,6127,6058,5909
 Change in inventories,1,EUR,currency,1000000,-20,-185,-129,-257,-18,-308,-793,-4,-39,2
 Change in trade and other receivables,1,EUR,currency,1000000,-228,-241,-66,-245,1124,-697,-668,-42,347,54
 Change in trade and other payables and returnable packaging deposits,1,EUR,currency,1000000,,,908,510,-759,1268,981,-100,543,271
 Total change in working capital,1,EUR,currency,1000000,80,69,,713,347,263,-480,-146,851,327
-Change in provisions and post-retirement obligations,1,EUR,currency,1000000,,,-31,-121,211,-290,-207,-32,-6,98
+Change in provisions and post-retirement obligations,1,EUR,currency,1000000,-73,-125,-31,-121,211,-290,-207,-32,-6,98
 Cash flow from operations,1,EUR,currency,1000000,4720,4924,5540,5556,4232,5127,5660,5949,6903,6334
 Interest paid,1,EUR,currency,1000000,-441,-463,-555,-528,-481,-456,-439,-624,-668,-621
 Interest received,1,EUR,currency,1000000,70,98,118,52,45,43,46,118,120,107
 Dividends received,1,EUR,currency,1000000,118,109,109,181,89,184,177,147,199,192
 Income taxes paid,1,EUR,currency,1000000,-749,-786,-824,-924,-749,-717,-948,-1160,-1051,-1000
 "Cash flow related to interest, dividend and income tax",1,EUR,currency,1000000,-1002,-1042,-1152,-1219,-1096,-946,-1164,-1519,-1400,-1322
-Cash flow from operating activities,1,EUR,currency,1000000,3718,3882,4388,4337,3136,4181,4496,4430,5503,5012
-Share of profit of associates and joint ventures and dividend income,1,EUR,currency,1000000,,,,,,,-230,-226,,
-Cash flow from operations before changes in working capital,1,EUR,currency,1000000,,,,,3674,5154,6347,6127,,
-Profit/(Loss),1,EUR,currency,1000000,,,,,-88,3535,,,,
-Share of profit of associates and joint ventures and dividend income on fair value through OCI investments,1,EUR,currency,1000000,,,-228,-173,,,,,,
-Other,1,EUR,currency,1000000,15,,-4,3,,,,,,
 "Gain on sale of property, plant and equipment, intangible assets and subsidiaries, joint ventures and associates",1,EUR,currency,1000000,-46,-141,,,,,,,,
-Investment income and share of profit and impairments of associates and joint ventures and dividend income on available-for-sale and held-for-trading investments,1,EUR,currency,1000000,-161,-84,,,,,,,,
 Change in trade and other payables,1,EUR,currency,1000000,328,495,,,,,,,,
-Change in provisions and employee benefits,1,EUR,currency,1000000,-73,-125,,,,,,,,
+Cash flow from operating activities,1,EUR,currency,1000000,3718,3882,4388,4337,3136,4181,4496,4430,5503,5012
 "Proceeds from sale of property, plant and equipment and intangible assets",1,EUR,currency,1000000,116,187,111,177,150,86,112,154,152,166
 "Purchase of property, plant and equipment",1,EUR,currency,1000000,-1757,-1696,-1888,-1915,-1501,-1324,-1791,-2434,-2184,-2133
 Purchase of intangible assets,1,EUR,currency,1000000,-109,-137,-167,-186,-139,-273,-220,-243,-281,-269
@@ -38,18 +31,18 @@ Free operating cash flow,1,EUR,currency,1000000,1773,2031,2246,2228,1513,2514,24
 "Acquisition of subsidiaries, net of cash acquired",1,EUR,currency,1000000,-9,-1047,-70,-183,-26,54,-171,-806,-4,-17
 "Acquisition of/additions to associates, joint ventures and other investments",1,EUR,currency,1000000,-68,-93,-159,-2875,-9,-678,-45,-409,-44,-38
 "Disposal of subsidiaries, net of cash disposed of",1,EUR,currency,1000000,15,10,15,244,-29,3,9,257,14,7
-"Disposal of associates, joint ventures and other investments",1,EUR,currency,1000000,,16,1,50,249,11,8,53,44,3
+"Disposal of associates, joint ventures and other investments",1,EUR,currency,1000000,—,16,1,50,249,11,8,53,44,3
 Cash flow from/(used) in acquisitions and disposals,1,EUR,currency,1000000,-62,-1114,-213,-2764,185,-610,-199,-905,10,-45
+Acquisition of non-controlling interests,1,EUR,currency,1000000,-294,-18,-2,-103,-4,-10,-391,-286,—,-22
 Cash flow used in investing activities,1,EUR,currency,1000000,-2007,-2965,-2355,-4873,-1438,-2277,-2286,-3576,-2435,-2455
 Proceeds from borrowings,1,EUR,currency,1000000,1670,3268,1694,2288,6037,1571,644,6751,3076,6582
 Repayment of borrowings,1,EUR,currency,1000000,-1001,-3205,-1545,-2150,-3714,-3362,-1934,-4614,-4091,-4051
-Payment of principal portion of lease commitments,1,EUR,currency,1000000,,,,,,,,,-355,-379
+Payment of principal portion of lease commitments,1,EUR,currency,1000000,,,—,-259,-281,-298,-304,-390,-355,-379
 Dividends paid,1,EUR,currency,1000000,-1031,-1011,-1090,-1223,-811,-796,-1099,-1335,-1199,-1276
-Purchase own shares and shares issued,1,EUR,currency,1000000,-31,,-20,428,11,12,-43,-942,-5,-701
-Acquisition of non-controlling interests,1,EUR,currency,1000000,-294,-18,-2,-103,-4,-10,-391,-286,,-22
+Purchase own shares and shares issued,1,EUR,currency,1000000,-31,—,-20,428,11,12,-43,-942,-5,-701
 Cash flow from/(used) in financing activities,1,EUR,currency,1000000,-672,-966,-967,-1016,1238,-2883,-3127,-816,-2574,153
-Payment of lease commitments,1,EUR,currency,1000000,,,,-259,-281,-298,-304,-390,,
-Net cash flow,1,EUR,currency,1000000,1039,-49,1066,-1552,2936,-979,-917,38,494,2710
 Cash and cash equivalents as at 1 January,1,EUR,currency,1000000,282,1366,1177,2248,687,3519,2556,1618,1425,1753
+Net cash flow,1,EUR,currency,1000000,1039,-49,1066,-1552,2936,-979,-917,38,494,2710
 Effect of movements in exchange rates,1,EUR,currency,1000000,45,-140,5,-9,-104,16,-21,-231,-166,-151
+Other,1,EUR,currency,1000000,15,—,-4,3,,,,,,
 Cash and cash equivalents as at 31 December,1,EUR,currency,1000000,1366,1177,2248,687,3519,2556,1618,1425,1753,4312

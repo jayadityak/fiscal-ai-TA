@@ -13,9 +13,10 @@ Goodwill,1,CHF,currency,1000000,33007,29748,31702,28896,27620,31012,31262,28693,
 Intangible assets,1,CHF,currency,1000000,20397,20615,18634,17824,20148,22223,20237,18225,19245,16673
 Investments in associates and joint ventures,1,CHF,currency,1000000,10709,11628,10792,11505,12005,11806,13023,13088,14326,12096
 Financial assets,1,CHF,currency,1000000,5719,6003,2567,2611,2594,2824,3253,2947,3650,3641
-Derivative assets,2,CHF,currency,1000000,,,,,,,,130,84,229
+Derivative assets,2,CHF,currency,1000000,,,,,,,—,130,84,229
 Employee benefits assets and reimbursement rights,1,CHF,currency,1000000,310,392,487,510,468,2417,1161,962,1475,1412
 Deferred tax assets,1,CHF,currency,1000000,2049,1967,1816,2114,1285,1258,1043,1181,995,946
+Current income tax assets,2,CHF,currency,1000000,114,62,58,55,,,,,,
 Total non-current assets,1,CHF,currency,1000000,99859,98190,96012,92277,89960,99885,100120,95693,104076,95182
 Total assets,1,CHF,currency,1000000,131901,130380,137015,127940,124028,139142,135182,126550,139264,127151
 Financial debt,1,CHF,currency,1000000,12118,10536,14694,14032,12019,10092,10892,9416,11863,11606
@@ -24,7 +25,7 @@ Trade and other payables,1,CHF,currency,1000000,18629,18872,17800,18803,18515,20
 Accruals,1,CHF,currency,1000000,3855,4094,4075,4492,4917,5051,5114,5112,5466,5575
 Provisions,1,CHF,currency,1000000,620,863,780,802,508,532,620,675,865,850
 Current income tax liabilities,1,CHF,currency,1000000,1221,1170,2731,2673,2661,2962,2447,2360,2435,2338
-Liabilities directly associated with assets held for sale,1,CHF,currency,1000000,6,12,2502,393,848,12,28,,19,100
+Liabilities directly associated with assets held for sale,1,CHF,currency,1000000,6,12,2502,393,848,12,28,—,19,100
 Total current liabilities,1,CHF,currency,1000000,37517,36054,43030,41615,39722,40020,39976,37084,42863,40694
 Financial debt,2,CHF,currency,1000000,11091,15932,25700,23132,27928,36482,43420,45825,51697,46246
 Derivative liabilities,2,CHF,currency,1000000,,,,,,,470,239,307,144
@@ -43,4 +44,3 @@ Total equity attributable to shareholders of the parent,1,CHF,currency,1000000,6
 Non-controlling interests,1,CHF,currency,1000000,1391,1273,1040,827,819,587,810,645,776,248
 Total equity,1,CHF,currency,1000000,65981,62777,58403,52862,46514,53727,42792,36387,36693,33058
 Total liabilities and equity,1,CHF,currency,1000000,131901,130380,137015,127940,124028,139142,135182,126550,139264,127151
-Current income tax assets,2,CHF,currency,1000000,114,62,58,55,,,,,,

@@ -25,6 +25,21 @@ canonicalization use bounded parallelism. The selected report years are 2017, 20
 2021, 2023, and 2025; their comparative columns cover ten fiscal years without
 downloading one report per year.
 
+## Frontend
+
+The read-only reviewer interface in `web/` renders the committed artifacts without
+runtime extraction, arithmetic, or LLM calls.
+
+```bash
+python3 scripts/export_frontend.py
+cd web
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000` to switch between all nine statements, review validation
+and source provenance, and download the complete workbooks.
+
 ## Design
 
 The pipeline is deliberately direct:
@@ -43,7 +58,7 @@ The pipeline is deliberately direct:
    identity, profit attribution subtotal, and cash roll-forward.
 
 The minimum uncached model budget is 54 calls: 45 statement extractions plus 9 label
-canonicalizations. The delivered run used 82 calls after focused retries on ambiguous
+canonicalizations. The delivered run used 92 calls after focused retries on ambiguous
 side-by-side statements. Responses are cached by model, prompt, schema, and input hash,
 with a hard stop at 100 uncached calls.
 

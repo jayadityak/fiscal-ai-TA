@@ -6,10 +6,11 @@ Other income,1,EUR,currency,1000000,46,141,75,95,56,1521,147,393,80,205
 "Raw materials, consumables and services",1,EUR,currency,1000000,-13003,-13540,-14001,-14592,-12450,-13535,-18618,-20077,-19313,-18465
 Personnel expenses,1,EUR,currency,1000000,-3263,-3550,-3749,-3880,-3669,-3485,-4079,-4353,-4466,-4478
 "Amortisation, depreciation and impairments",1,EUR,currency,1000000,-1817,-1587,-1693,-1959,-2874,-1959,-1886,-3096,-2605,-2609
-Total other expenses,1,EUR,currency,1000000,,,-19443,-20431,-18993,-18979,-24583,-27526,-26384,-25552
+Total other expenses,1,EUR,currency,1000000,-18083,-18677,-19443,-20431,-18993,-18979,-24583,-27526,-26384,-25552
 Operating profit,1,EUR,currency,1000000,2755,3352,3121,3633,778,4483,4283,3229,3517,3406
 Interest income,1,EUR,currency,1000000,60,72,71,75,50,49,74,90,110,108
 Interest expenses,1,EUR,currency,1000000,-419,-468,-492,-529,-497,-462,-458,-640,-680,-620
+Other net finance income/(expenses),1,EUR,currency,1000000,-134,-123,-64,-59,-143,14,48,-375,-235,-154
 Net finance expenses,1,EUR,currency,1000000,-493,-519,-485,-513,-590,-399,-336,-925,-805,-666
 Share of profit/(loss) of associates and joint ventures,1,EUR,currency,1000000,150,75,210,164,-31,250,223,218,-705,255
 Profit before income tax,1,EUR,currency,1000000,2412,2908,2846,3284,157,4334,4170,2522,2007,2995
@@ -17,10 +18,7 @@ Income tax expense,1,EUR,currency,1000000,-673,-755,-741,-910,-245,-799,-1131,-1
 Profit,1,EUR,currency,1000000,1739,2153,2105,2374,-88,3535,3039,2401,1161,2138
 Shareholders of the Company (net profit),1,EUR,currency,1000000,1540,1935,1913,2166,-204,3324,2682,2304,978,1885
 Non-controlling interests,1,EUR,currency,1000000,199,218,192,208,116,211,357,97,183,253
-Profit,2,EUR,currency,1000000,1739,2153,2105,2374,-88,3535,,,1161,2138
-Weighted average number of shares – basic,1,EUR,currency,1000000,569737210,570074335,570146069,573643551,575625598,575740269,,,560188961,556774934
-Weighted average number of shares – diluted,1,EUR,currency,1000000,570370392,570652111,570663632,574217111,575625598,575969395,,,560639030,557024742
-Basic earnings per share (€),1,EUR,currency_per_share,1,2.70,3.39,3.36,3.78,-0.36,5.77,,,1.75,3.39
-Diluted earnings per share (€),1,EUR,currency_per_share,1,2.70,3.39,3.35,3.77,-0.36,5.77,,,1.74,3.38
-Other net finance income/(expenses),1,EUR,currency,1000000,-134,-123,-64,-59,-143,14,48,-375,,
-Total expenses,1,EUR,currency,1000000,-18083,-18677,,,,,,,,
+Weighted average number of shares – basic,1,EUR,shares,1,569737210,570074335,570146069,573643551,575625598,575740269,575563505,563448845,560188961,556774934
+Weighted average number of shares – diluted,1,EUR,shares,1,570370392,570652111,570663632,574217111,575625598,575969395,576026120,563979620,560639030,557024742
+Basic earnings per share (€),1,EUR,currency_per_share,1,2.70,3.39,3.36,3.78,-0.36,5.77,4.66,4.09,1.75,3.39
+Diluted earnings per share (€),1,EUR,currency_per_share,1,2.70,3.39,3.35,3.77,-0.36,5.77,4.65,4.09,1.74,3.38

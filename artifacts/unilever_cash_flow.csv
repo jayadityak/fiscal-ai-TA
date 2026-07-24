@@ -1,66 +1,60 @@
 line_item,occurrence,currency,value_kind,unit_multiplier,2016-12-31,2017-12-31,2018-12-31,2019-12-31,2020-12-31,2021-12-31,2022-12-31,2023-12-31,2024-12-31,2025-12-31
- Net profit from continuing operations,1,EUR,currency,1000000,,,,,,,,6637,6039,6213
- Taxation,1,EUR,currency,1000000,1922,1670,2572,2263,1923,1935,2068,1990,2332,2481
-" Share of net profit of joint ventures/associates and other (income)/loss from non-
- current investments",1,EUR,currency,1000000,,-173,-207,-176,-178,-282,-232,-206,-263,-228
- Net monetary loss arising from hyperinflationary economies,1,EUR,currency,1000000,,,-122,-32,-20,74,157,169,201,68
- Net finance costs,1,EUR,currency,1000000,563,1004,608,627,505,354,493,409,520,503
- Operating profit from continuing operations,1,EUR,currency,1000000,,,,,,,,8998,8829,9037
-" Depreciation, amortisation and impairment",1,EUR,currency,1000000,1464,2025,2216,1982,2018,1763,1946,1148,1370,1353
- Changes in working capital:,1,EUR,currency,1000000,51,-68,-793,-9,680,-47,-422,753,-188,116
-   Inventories,1,EUR,currency,1000000,190,-104,-471,313,-587,-458,-1398,282,-190,-281
-   Trade and other receivables(b),1,EUR,currency,1000000,142,-506,-1298,-445,1125,-307,-1852,731,-211,-2620
-   Trade payables and other liabilities(b),1,EUR,currency,1000000,-281,542,976,123,142,718,2828,-260,213,3017
- Pensions and similar obligations less payments,1,EUR,currency,1000000,-327,-904,-128,-260,-182,-183,-119,-251,-54,-74
- Provisions less payments,1,EUR,currency,1000000,65,200,55,7,-53,-61,203,-171,289,-130
- Elimination of losses/(profits) on disposals,1,EUR,currency,1000000,127,-298,-4313,60,60,23,-2335,-440,259,58
- Non-cash charge for share-based compensation,1,EUR,currency,1000000,198,284,196,151,108,161,177,192,292,255
- Other adjustments,1,EUR,currency,1000000,-81,-153,-260,2,-1,-53,-116,97,116,157
- Cash flow from continuing operating activities,1,EUR,currency,1000000,,,,,,,,10326,10913,10772
- Income tax paid on continuing operations,1,EUR,currency,1000000,,,,,,,,-1933,-2452,-2720
- Net cash flow from continuing operating activities,1,EUR,currency,1000000,,,,,,,,8393,8461,8052
- Cash flow from operations attributable to discontinued operations,1,EUR,currency,1000000,,,,,,,,1235,1231,475
- Income tax paid from discontinued operation,1,EUR,currency,1000000,,,,,,,,-202,-173,-177
- Net operating cash flows attributable to discontinued operations,1,EUR,currency,1000000,,,,,,,,1033,1058,298
- Total cash flows from operating activities,1,EUR,currency,1000000,,,,,,,,9426,9519,8350
- Interest received,1,EUR,currency,1000000,105,154,110,146,169,148,287,223,370,352
- Purchase of intangible assets,1,EUR,currency,1000000,-232,-158,-203,-210,-158,-232,-253,-241,-233,-174
-" Purchase of property, plant and equipment",1,EUR,currency,1000000,-1804,-1509,-1329,-1316,-863,-1108,-1456,-1194,-1381,-1417
-" Disposal of property, plant and equipment",1,EUR,currency,1000000,158,46,108,97,89,101,82,15,15,126
- Acquisition of businesses and investments in joint ventures and associates,1,EUR,currency,1000000,-1731,-4896,-1336,-1122,-1426,-2131,-979,-100,-734,-1674
-" Disposal of businesses, joint ventures and associates",1,EUR,currency,1000000,30,561,7093,177,39,43,4622,436,910,107
- Acquisition of other non-current investments,1,EUR,currency,1000000,-208,-317,-94,-160,-128,-142,-170,-533,-166,-111
- Disposal of other non-current investments,1,EUR,currency,1000000,173,251,151,55,51,137,266,62,59,239
-" Dividends from joint ventures, associates and other non-current investments",1,EUR,currency,1000000,186,138,154,164,188,185,185,239,261,243
- Sale/(purchase) of financial assets,1,EUR,currency,1000000,135,-149,-10,-68,558,-247,-131,-318,476,-85
- Net cash flow used in continuing investing activities,1,EUR,currency,1000000,,,,,,,,-1411,-423,-2394
- Net investing cash flows attributable to discontinued operations,1,EUR,currency,1000000,,,,,,,,-883,-202,-724
- Total cash outflow used in investing activities,1,EUR,currency,1000000,,,,,,,,-2294,-625,-3118
- Dividends paid on ordinary share capital,1,EUR,currency,1000000,-3609,-3916,-4066,-4209,-4279,-4483,-4329,-4363,-4319,-4453
- Interest paid,1,EUR,currency,1000000,,-574,-571,-694,-624,-488,-744,-751,-929,-1018
- Net change in short-term borrowings,1,EUR,currency,1000000,258,2695,-4026,337,722,656,-545,-506,575,-2228
- Additional financial liabilities,1,EUR,currency,1000000,6761,8851,10595,5911,3117,4748,7776,4418,4234,4278
- Repayment of financial liabilities,1,EUR,currency,1000000,-5213,-2604,-6594,-4912,-3577,-3550,-8440,-3470,-3846,-3547
- Capital element of lease rental payments,1,EUR,currency,1000000,-35,-497,-481,-435,-443,-464,-518,-349,-342,-301
- Repurchase of shares,1,EUR,currency,1000000,,-5014,-6020,,,-3018,-1509,-1507,-1508,-1510
- Other financing activities(c),1,EUR,currency,1000000,,,,-464,-720,-500,-581,-556,-694,-1105
- Net cash flow used in continuing financing activities,1,EUR,currency,1000000,,,,,,,,-7084,-6829,-9884
- Net financing cash flows attributable to discontinued operations,1,EUR,currency,1000000,,,,,,,,-109,-112,3070
- Total cash flow used in financing activities,1,EUR,currency,1000000,,,,,,,,-7193,-6941,-6814
- Net increase/(decrease) in cash and cash equivalents,1,EUR,currency,1000000,786,-20,-151,1205,1773,-2373,845,-61,1953,-1582
- Cash and cash equivalents at the beginning of the year,1,EUR,currency,1000000,2128,3198,3169,3090,4116,5475,3387,4225,4045,5950
- Effect of foreign exchange rate changes,1,EUR,currency,1000000,284,-9,72,-179,-414,285,-7,-119,-48,-498
- Cash and cash equivalents at the end of the year,1,EUR,currency,1000000,3198,3169,3090,4116,5475,3387,4225,4045,5950,3870
+Net profit from continuing operations,1,EUR,currency,1000000,,,,,,,,6637,6039,6213
+Taxation,1,EUR,currency,1000000,1922,1670,2572,2263,1923,1935,2068,1990,2332,2481
+Share of net profit of joint ventures/associates and other (income)/loss from non- current investments,1,EUR,currency,1000000,,-173,-207,-176,-178,-282,-232,-206,-263,-228
+Net monetary loss arising from hyperinflationary economies,1,EUR,currency,1000000,,—,-122,-32,-20,74,157,169,201,68
+Net finance costs,1,EUR,currency,1000000,563,1004,608,627,505,354,493,409,520,503
+Operating profit from continuing operations,1,EUR,currency,1000000,,,,,,,,8998,8829,9037
+"Depreciation, amortisation and impairment",1,EUR,currency,1000000,1464,2025,2216,1982,2018,1763,1946,1148,1370,1353
+Changes in working capital:,1,EUR,currency,1000000,51,-68,-793,-9,680,-47,-422,753,-188,116
+Inventories,1,EUR,currency,1000000,190,-104,-471,313,-587,-458,-1398,282,-190,-281
+Trade and other receivables(b),1,EUR,currency,1000000,142,-506,-1298,-445,1125,-307,-1852,731,-211,-2620
+Trade payables and other liabilities(b),1,EUR,currency,1000000,-281,542,976,123,142,718,2828,-260,213,3017
+Pensions and similar obligations less payments,1,EUR,currency,1000000,-327,-904,-128,-260,-182,-183,-119,-251,-54,-74
+Provisions less payments,1,EUR,currency,1000000,65,200,55,7,-53,-61,203,-171,289,-130
+Non-cash charge for share-based compensation,1,EUR,currency,1000000,198,284,196,151,108,161,177,192,292,255
+Other adjustments,1,EUR,currency,1000000,-81,-153,-260,2,-1,-53,-116,97,116,157
+Cash flow from continuing operating activities,1,EUR,currency,1000000,,,,,,,,10326,10913,10772
+Income tax paid on continuing operations,1,EUR,currency,1000000,,,,,,,,-1933,-2452,-2720
+Net cash flow from continuing operating activities,1,EUR,currency,1000000,,,,,,,,8393,8461,8052
+Cash flow from operations attributable to discontinued operations,1,EUR,currency,1000000,,,,,,,,1235,1231,475
+Income tax paid from discontinued operation,1,EUR,currency,1000000,,,,,,,,-202,-173,-177
+Net operating cash flows attributable to discontinued operations,1,EUR,currency,1000000,,,,,,,,1033,1058,298
+Interest received,1,EUR,currency,1000000,105,154,110,146,169,148,287,223,370,352
 Net profit,1,EUR,currency,1000000,5547,6456,9788,6026,6073,6621,8269,7140,,
 Operating profit,1,EUR,currency,1000000,7801,8957,12639,8708,8303,8702,10755,9758,,
-Cash flow from operating activities,1,EUR,currency,1000000,9298,10043,9612,10641,10933,10305,10089,11561,,
 Income tax paid,1,EUR,currency,1000000,-2251,-2164,-2294,-2532,-1875,-2333,-2807,-2135,,
-Net cash flow from operating activities,1,EUR,currency,1000000,7047,7879,7318,8109,9058,7972,7282,9426,,
-Net cash flow (used in)/from investing activities,1,EUR,currency,1000000,-3188,-5879,4644,-2237,-1481,-3246,2453,-2294,,
-Net cash flow (used in)/from financing activities,1,EUR,currency,1000000,-3073,-2020,-12113,-4667,-5804,-7099,-8890,-7193,,
-Other movements on treasury shares,1,EUR,currency,1000000,-257,-204,-257,-201,,,,,,
-Buyback of preference shares,1,EUR,currency,1000000,,-448,,,,,,,,
-Other financing activities,1,EUR,currency,1000000,-506,-309,-693,-464,,,,,,
-"Share of net profit of joint ventures/associates and other income/(loss) from
- non-current investments and associates",1,EUR,currency,1000000,-231,-173,,,,,,,,
+Share of net profit of joint ventures/associates and other income/(loss) from non-current investments and associates,1,EUR,currency,1000000,-231,-173,,,,,,,,
+Total cash flows from operating activities,1,EUR,currency,1000000,7047,7879,7318,8109,9058,7972,7282,9426,9519,8350
+Cash flow from operating activities,1,EUR,currency,1000000,9298,10043,9612,10641,10933,10305,10089,11561,,
+Elimination of losses/(profits) on disposals,1,EUR,currency,1000000,127,-298,-4313,60,60,23,-2335,-440,259,58
+Purchase of intangible assets,1,EUR,currency,1000000,-232,-158,-203,-210,-158,-232,-253,-241,-233,-174
+"Purchase of property, plant and equipment",1,EUR,currency,1000000,-1804,-1509,-1329,-1316,-863,-1108,-1456,-1194,-1381,-1417
+"Disposal of property, plant and equipment",1,EUR,currency,1000000,158,46,108,97,89,101,82,15,15,126
+Acquisition of businesses and investments in joint ventures and associates,1,EUR,currency,1000000,-1731,-4896,-1336,-1122,-1426,-2131,-979,-100,-734,-1674
+"Disposal of businesses, joint ventures and associates",1,EUR,currency,1000000,30,561,7093,177,39,43,4622,436,910,107
+Acquisition of other non-current investments,1,EUR,currency,1000000,-208,-317,-94,-160,-128,-142,-170,-533,-166,-111
+Disposal of other non-current investments,1,EUR,currency,1000000,173,251,151,55,51,137,266,62,59,239
+"Dividends from joint ventures, associates and other non-current investments",1,EUR,currency,1000000,186,138,154,164,188,185,185,239,261,243
+Sale/(purchase) of financial assets,1,EUR,currency,1000000,135,-149,-10,-68,558,-247,-131,-318,476,-85
+Net cash flow used in continuing investing activities,1,EUR,currency,1000000,,,,,,,,-1411,-423,-2394
+Net investing cash flows attributable to discontinued operations,1,EUR,currency,1000000,,,,,,,,-883,-202,-724
+Total cash outflow used in investing activities,1,EUR,currency,1000000,-3188,-5879,4644,-2237,-1481,-3246,2453,-2294,-625,-3118
+Dividends paid on ordinary share capital,1,EUR,currency,1000000,-3609,-3916,-4066,-4209,-4279,-4483,-4329,-4363,-4319,-4453
+Interest paid,1,EUR,currency,1000000,,-574,-571,-694,-624,-488,-744,-751,-929,-1018
+Net change in short-term borrowings,1,EUR,currency,1000000,258,2695,-4026,337,722,656,-545,-506,575,-2228
+Additional financial liabilities,1,EUR,currency,1000000,6761,8851,10595,5911,3117,4748,7776,4418,4234,4278
+Repayment of financial liabilities,1,EUR,currency,1000000,-5213,-2604,-6594,-4912,-3577,-3550,-8440,-3470,-3846,-3547
+Capital element of lease rental payments,1,EUR,currency,1000000,-35,-497,-481,-435,-443,-464,-518,-349,-342,-301
+Repurchase of shares,1,EUR,currency,1000000,—,-5014,-6020,—,—,-3018,-1509,-1507,-1508,-1510
+Other financing activities(c),1,EUR,currency,1000000,-506,-309,-693,-464,-720,-500,-581,-556,-694,-1105
+Net cash flow used in continuing financing activities,1,EUR,currency,1000000,,,,,,,,-7084,-6829,-9884
+Net financing cash flows attributable to discontinued operations,1,EUR,currency,1000000,,,,,,,,-109,-112,3070
+Other movements on treasury shares,1,EUR,currency,1000000,-257,-204,-257,-201,—,—,,,,
+Buyback of preference shares,1,EUR,currency,1000000,—,-448,—,—,,,,,,
 Interest and preference dividends paid,1,EUR,currency,1000000,-472,-470,,,,,,,,
+Total cash flow used in financing activities,1,EUR,currency,1000000,-3073,-2020,-12113,-4667,-5804,-7099,-8890,-7193,-6941,-6814
+Cash and cash equivalents at the beginning of the year,1,EUR,currency,1000000,2128,3198,3169,3090,4116,5475,3387,4225,4045,5950
+Net increase/(decrease) in cash and cash equivalents,1,EUR,currency,1000000,786,-20,-151,1205,1773,-2373,845,-61,1953,-1582
+Effect of foreign exchange rate changes,1,EUR,currency,1000000,284,-9,72,-179,-414,285,-7,-119,-48,-498
+Cash and cash equivalents at the end of the year,1,EUR,currency,1000000,3198,3169,3090,4116,5475,3387,4225,4045,5950,3870

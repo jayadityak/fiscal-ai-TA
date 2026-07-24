@@ -5,8 +5,20 @@ from pathlib import Path
 
 import pandas as pd
 
+from .extract import _text_source
 from .companies import COMPANIES
 from .compile import canonical_key
+
+
+REQUIRED_PERIOD_ROWS = {
+    ("heineken", "income_statement"): {
+        "Other net finance income/(expenses)": tuple(range(2016, 2026)),
+        "Weighted average number of shares – basic": tuple(range(2016, 2026)),
+        "Weighted average number of shares – diluted": tuple(range(2016, 2026)),
+        "Basic earnings per share (€)": tuple(range(2016, 2026)),
+        "Diluted earnings per share (€)": tuple(range(2016, 2026)),
+    },
+}
 
 
 def _latest_value(rows: pd.DataFrame, labels: tuple[str, ...]) -> Decimal | None:
@@ -278,10 +290,105 @@ def write_validation(
                     ),
                 }
             )
+        for (required_company, statement), required_rows in REQUIRED_PERIOD_ROWS.items():
+            if required_company != company:
+                continue
+            statement_rows = rows[rows["statement"] == statement]
+            for label, years in required_rows.items():
+                canonical_id = canonical_key(label)
+                expected = {f"{year}-12-31" for year in years}
+                present = (
+                    statement_rows["cell_status"].isin(["number", "dash"])
+                    if "cell_status" in statement_rows
+                    else statement_rows["value"] != ""
+                )
+                actual = set(
+                    statement_rows.loc[
+                        (statement_rows["canonical_id"] == canonical_id)
+                        & present,
+                        "period_end",
+                    ].astype(str)
+                )
+                missing = sorted(expected - actual)
+                results.append(
+                    {
+                        "company": company,
+                        "check": f"source_visible_row_complete:{label}",
+                        "period_end": "",
+                        "status": "passed" if not missing else "failed",
+                        "actual": str(len(expected & actual)),
+                        "expected": str(len(expected)),
+                        "difference": str(-len(missing)) if missing else "0",
+                        "message": (
+                            "All source-visible periods extracted"
+                            if not missing
+                            else f"Missing periods: {', '.join(missing)}"
+                        ),
+                    }
+                )
         for period_end in expected_periods:
             for result in _period_checks(rows, period_end):
                 result["company"] = company
                 results.append(result)
     result = pd.DataFrame(results)
     result.to_csv(artifacts_dir / "validation.csv", index=False)
+    return result
+
+
+def write_reconciliation(
+    observations: pd.DataFrame,
+    manifest: pd.DataFrame,
+    artifacts_dir: Path = Path("artifacts"),
+) -> pd.DataFrame:
+    source_hashes = {
+        (str(row.company), int(row.report_year)): _text_source(
+            Path(str(row.local_path))
+        )[2]
+        for row in manifest.itertuples()
+        if (
+            str(row.status) == "downloaded"
+            and str(row.document_type) == "annual_report"
+            and pd.notna(row.report_year)
+        )
+    }
+    results = []
+    for (company, report_year, statement), rows in observations.groupby(
+        ["company", "report_year", "statement"],
+        sort=True,
+    ):
+        populated = rows[rows["raw_value"].astype(str).str.strip() != ""]
+        source_hash = source_hashes.get((str(company), int(report_year)), "")
+        document_matches = (
+            bool(source_hash)
+            and set(populated["document_id"].astype(str)) == {source_hash}
+        )
+        missing_labels = int(
+            (populated["reported_label"].astype(str).str.strip() == "").sum()
+        )
+        missing_values = int(
+            (populated["raw_value"].astype(str).str.strip() == "").sum()
+        )
+        results.append(
+            {
+                "company": company,
+                "report_year": int(report_year),
+                "statement": statement,
+                "source_sha256": source_hash,
+                "observation_document_matches_source": document_matches,
+                "source_page": ",".join(
+                    sorted(set(populated["page"].astype(str)))
+                ),
+                "extracted_rows": int(populated["row_order"].nunique()),
+                "extracted_cells": len(populated),
+                "missing_labels": missing_labels,
+                "missing_values": missing_values,
+                "status": (
+                    "passed"
+                    if document_matches and not missing_labels and not missing_values
+                    else "failed"
+                ),
+            }
+        )
+    result = pd.DataFrame(results)
+    result.to_csv(artifacts_dir / "reconciliation.csv", index=False)
     return result

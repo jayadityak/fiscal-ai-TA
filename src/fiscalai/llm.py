@@ -137,6 +137,7 @@ def extract_statement(
     statement: str,
     evidence: str,
     focus_hint: str = "",
+    required_labels: tuple[str, ...] = (),
     cache_root: Path = Path(".cache/llm"),
 ) -> StatementExtraction:
     payload = f"Requested statement: {statement}\n\nSOURCE PAGE TEXT:\n{evidence}"
@@ -166,10 +167,46 @@ def extract_statement(
             StatementExtraction,
             cache_root,
         )
+    extracted_labels = {
+        " ".join(row.exact_label.casefold().split()) for row in parsed.rows
+    }
+    missing_required = [
+        label
+        for label in required_labels
+        if " ".join(label.casefold().split()) not in extracted_labels
+    ]
+    if missing_required:
+        retry_instructions = (
+            instructions
+            + "\nThe following printed rows are visibly present in the requested statement "
+            "and were missed in the first pass. Re-read the complete statement and include "
+            "every one of them with both period cells: "
+            + "; ".join(missing_required)
+            + "."
+        )
+        parsed = _parse_cached(
+            "extract_statement_required_rows_retry_v1",
+            retry_instructions,
+            payload,
+            StatementExtraction,
+            cache_root,
+        )
     if parsed.statement != statement:
         raise ValueError(f"Expected {statement}, model returned {parsed.statement}")
     if any(not row.exact_label.strip() for row in parsed.rows):
         raise ValueError(f"{statement} contains a row with an empty label")
+    extracted_labels = {
+        " ".join(row.exact_label.casefold().split()) for row in parsed.rows
+    }
+    missing_required = [
+        label
+        for label in required_labels
+        if " ".join(label.casefold().split()) not in extracted_labels
+    ]
+    if missing_required:
+        raise ValueError(
+            f"{statement} is missing source-visible rows after retry: {missing_required}"
+        )
     return parsed
 
 

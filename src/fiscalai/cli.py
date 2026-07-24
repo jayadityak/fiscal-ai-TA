@@ -10,7 +10,7 @@ from .companies import COMPANIES, get_company
 from .compile import write_outputs
 from .extract import extract_report, write_candidates
 from .scrape import scrape_company
-from .validate import write_validation
+from .validate import write_reconciliation, write_validation
 
 
 def _select_report(manifest: pd.DataFrame, company: str, report_year: int) -> Path:
@@ -124,9 +124,14 @@ def main() -> None:
 
     print("Canonicalizing labels and compiling tables...", flush=True)
     winners, _ = write_outputs(new_observations)
+    reconciliation = write_reconciliation(new_observations, manifest)
     validation = write_validation(winners)
+    print(reconciliation["status"].value_counts().to_string())
     print(validation.to_string(index=False))
-    if (validation["status"] == "failed").any():
+    if (
+        (validation["status"] == "failed").any()
+        or (reconciliation["status"] == "failed").any()
+    ):
         raise SystemExit(1)
 
 

@@ -4,12 +4,19 @@ import pandas as pd
 
 from fiscalai.compile import (
     canonical_key,
+    display_label,
     normalize_currency,
     parse_number,
     prepare_observations,
     resolve_restatements,
 )
-from fiscalai.extract import MIN_STATEMENT_SCORE, _page_score
+from fiscalai.extract import (
+    MIN_STATEMENT_SCORE,
+    TEXT_COMPANIONS,
+    _document_id,
+    _page_score,
+    _text_source,
+)
 from fiscalai.llm import (
     CanonicalGroup,
     Canonicalization,
@@ -27,6 +34,9 @@ def test_parse_number_preserves_dash_and_parentheses() -> None:
     assert normalize_currency("€ million") == "EUR"
     assert parse_number("—") == (None, "dash")
     assert parse_number("") == (None, "missing")
+    assert display_label("  Share of net profit\n  from associates ") == (
+        "Share of net profit from associates"
+    )
 
 
 def test_classification_is_direct_and_explainable() -> None:
@@ -55,6 +65,25 @@ def test_statement_title_at_top_beats_a_note_reference() -> None:
     )
     assert _page_score(statement, "income_statement") > _page_score(note, "income_statement")
     assert _page_score(statement, "income_statement") >= MIN_STATEMENT_SCORE
+
+
+def test_companion_pdf_becomes_the_source_document_id(
+    tmp_path,
+    monkeypatch,
+) -> None:
+    official = tmp_path / "official.pdf"
+    companion = tmp_path / "companion.pdf"
+    official.write_bytes(b"official")
+    companion.write_bytes(b"companion")
+    official_id = _document_id(official)
+    companion_id = _document_id(companion)
+    monkeypatch.setitem(TEXT_COMPANIONS, official_id, companion)
+
+    source_path, method, source_id = _text_source(official)
+
+    assert source_path == companion
+    assert method == "official_pdf_with_text_companion"
+    assert source_id == companion_id
 
 
 def test_latest_selected_report_wins() -> None:
@@ -109,6 +138,29 @@ def test_repeated_labels_remain_distinct_rows() -> None:
     winners, _ = resolve_restatements(prepared)
     assert winners["reported_occurrence"].tolist() == [1, 2]
     assert winners["value"].tolist() == ["16191", "3088"]
+
+
+def test_weighted_average_share_count_is_not_scaled_as_currency() -> None:
+    rows = pd.DataFrame(
+        [
+            {
+                "company": "heineken",
+                "document_id": "report",
+                "report_year": 2025,
+                "statement": "income_statement",
+                "row_order": 1,
+                "reported_label": "Weighted average number of shares – basic",
+                "period_end": "2025-12-31",
+                "raw_value": "556,774,934",
+                "currency": "EUR",
+                "unit_multiplier": 1_000_000,
+            }
+        ]
+    )
+    prepared = prepare_observations(rows)
+    assert prepared.iloc[0]["value_kind"] == "shares"
+    assert prepared.iloc[0]["effective_multiplier"] == 1
+    assert prepared.iloc[0]["value"] == "556774934"
 
 
 def test_labels_that_coexist_cannot_be_canonicalized_together(

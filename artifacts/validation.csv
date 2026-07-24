@@ -2,6 +2,11 @@ company,check,period_end,status,actual,expected,difference,message
 heineken,income_statement_coverage_2016_2025,,passed,10,10,0,All target periods present
 heineken,balance_sheet_coverage_2016_2025,,passed,10,10,0,All target periods present
 heineken,cash_flow_coverage_2016_2025,,passed,10,10,0,All target periods present
+heineken,source_visible_row_complete:Other net finance income/(expenses),,passed,10,10,0,All source-visible periods extracted
+heineken,source_visible_row_complete:Weighted average number of shares – basic,,passed,10,10,0,All source-visible periods extracted
+heineken,source_visible_row_complete:Weighted average number of shares – diluted,,passed,10,10,0,All source-visible periods extracted
+heineken,source_visible_row_complete:Basic earnings per share (€),,passed,10,10,0,All source-visible periods extracted
+heineken,source_visible_row_complete:Diluted earnings per share (€),,passed,10,10,0,All source-visible periods extracted
 heineken,assets_equal_liabilities_plus_equity,2016-12-31,passed,39321000000,39321000000,0,Tolerance is one largest source presentation unit (1000000)
 heineken,profit_equals_parent_plus_non_controlling_interests,2016-12-31,passed,1739000000,1739000000,0,Tolerance is one largest source presentation unit (1000000)
 heineken,ending_cash_equals_opening_cash_plus_change,2016-12-31,passed,1366000000,1366000000,0,Tolerance is one largest source presentation unit (1000000)

@@ -6,6 +6,7 @@ Loans and advances to customers,1,EUR,currency,1000000,274,277,341,277,194,209,2
 Deferred tax assets,1,EUR,currency,1000000,1011,768,626,647,779,682,618,1292,1264,1213
 Equity instruments,1,EUR,currency,1000000,,,,,,,145,562,465,476
 Other non-current assets,1,EUR,currency,1000000,,,1220,1255,884,1070,1085,978,1009,1161
+Other investments and receivables,1,EUR,currency,1000000,1077,1113,,,,,,,,
 Total non-current assets,1,EUR,currency,1000000,31184,32786,33026,38085,33612,39272,41391,43754,42874,40860
 Inventories,1,EUR,currency,1000000,1618,1814,1920,2213,1958,2438,3250,3721,3572,3263
 Trade and other receivables,1,EUR,currency,1000000,3052,3496,3795,4123,2807,3662,4531,5019,4588,4488
@@ -13,23 +14,24 @@ Current tax assets,1,EUR,currency,1000000,47,64,71,123,154,97,84,196,165,226
 Derivative assets,1,EUR,currency,1000000,,,35,28,77,96,70,58,169,121
 Cash and cash equivalents,1,EUR,currency,1000000,3035,2442,2903,1821,4000,3248,2765,2377,2350,4773
 Assets classified as held for sale,1,EUR,currency,1000000,57,33,401,111,24,37,315,28,55,22
+Prepayments,1,EUR,currency,1000000,328,399,,,,,,,,
 Total current assets,1,EUR,currency,1000000,8137,8248,9125,8419,9020,9578,11015,11399,10899,12893
 Total assets,1,EUR,currency,1000000,39321,41034,42151,46504,42632,48850,52406,55153,53773,53753
-Other investments and receivables,1,EUR,currency,1000000,1077,1113,,,,,,,,
-Prepayments,1,EUR,currency,1000000,328,399,,,,,,,,
-Shareholders' equity,1,EUR,currency,1000000,,,14525,16147,13392,17356,19551,20056,19581,17978
-Non-controlling interests,1,EUR,currency,1000000,1335,1200,1183,1164,1000,2344,2369,2733,2821,2636
-Total equity,1,EUR,currency,1000000,14573,14521,15708,17311,14392,19700,21920,22789,22402,20614
 Share capital,1,EUR,currency,1000000,922,922,,,,,,,,
 Share premium,1,EUR,currency,1000000,2701,2701,,,,,,,,
 Reserves,1,EUR,currency,1000000,-1173,-2129,,,,,,,,
 Retained earnings,1,EUR,currency,1000000,10788,11827,,,,,,,,
-Equity attributable to equity holders of the Company,1,EUR,currency,1000000,13238,13321,,,,,,,,
+Shareholders' equity,1,EUR,currency,1000000,13238,13321,14525,16147,13392,17356,19551,20056,19581,17978
+Non-controlling interests,1,EUR,currency,1000000,1335,1200,1183,1164,1000,2344,2369,2733,2821,2636
+Total equity,1,EUR,currency,1000000,14573,14521,15708,17311,14392,19700,21920,22789,22402,20614
 Borrowings,1,EUR,currency,1000000,10954,12301,12628,13366,14616,13640,12893,14046,13783,16191
 Post-retirement obligations,1,EUR,currency,1000000,,,954,1189,938,668,568,586,519,542
 Provisions,1,EUR,currency,1000000,302,970,833,756,688,636,572,627,586,546
 Deferred tax liabilities,1,EUR,currency,1000000,1672,1495,1431,1422,999,1971,2138,2213,2155,1820
 Other non-current liabilities,1,EUR,currency,1000000,,,168,153,131,141,125,67,90,108
+Tax liabilities,1,EUR,currency,1000000,3,—,,,,,,,,
+Employee benefits,1,EUR,currency,1000000,1420,1289,,,,,,,,
+Bank overdrafts and commercial papers,1,EUR,currency,1000000,1669,1265,,,,,,,,
 Total non-current liabilities,1,EUR,currency,1000000,14351,16055,16014,16886,17372,17056,16296,17539,17133,19207
 Borrowings,2,EUR,currency,1000000,1981,1947,2358,3686,3580,3233,3484,4192,3266,3088
 Trade and other payables,1,EUR,currency,1000000,6224,6756,6891,7520,6107,7750,9283,9432,9912,9548
@@ -37,10 +39,7 @@ Returnable packaging deposits,1,EUR,currency,1000000,,,569,565,454,476,545,531,5
 Provisions,2,EUR,currency,1000000,154,178,164,184,416,301,226,206,176,302
 Current tax liabilities,1,EUR,currency,1000000,352,310,245,283,259,268,352,332,307,307
 Derivative liabilities,1,EUR,currency,1000000,,,70,69,52,46,119,132,52,144
+Liabilities associated with assets classified as held for sale,1,EUR,currency,1000000,17,2,132,—,—,20,181,—,,
 Total current liabilities,1,EUR,currency,1000000,10397,10458,10429,12307,10868,12094,14190,14825,14238,13932
-Liabilities associated with assets classified as held for sale,1,EUR,currency,1000000,17,2,132,,,20,181,,,
-Tax liabilities,1,EUR,currency,1000000,3,,,,,,,,,
-Employee benefits,1,EUR,currency,1000000,1420,1289,,,,,,,,
-Bank overdrafts and commercial papers,1,EUR,currency,1000000,1669,1265,,,,,,,,
 Total liabilities,1,EUR,currency,1000000,24748,26513,,,,,,,,
 Total equity and liabilities,1,EUR,currency,1000000,39321,41034,42151,46504,42632,48850,52406,55153,53773,53753

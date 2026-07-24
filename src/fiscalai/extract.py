@@ -34,18 +34,37 @@ TEXT_COMPANIONS = {
             "798661ad641ab15daa68854b13b9ae1e264e62a878090aae79ff3d07deb235d0.pdf"
         )
 }
+REQUIRED_ROW_ANCHORS = {
+    ("heineken", "income_statement"): (
+        "Other net finance income/(expenses)",
+        "Weighted average number of shares – basic",
+        "Weighted average number of shares – diluted",
+        "Basic earnings per share (€)",
+        "Diluted earnings per share (€)",
+        "Shareholders of the Company (net profit)",
+        "Non-controlling interests",
+    ),
+}
 
 
-def _text_source(pdf_path: Path) -> tuple[Path, str]:
-    document_id = (
+def _document_id(pdf_path: Path) -> str:
+    return (
         pdf_path.stem
         if re.fullmatch(r"[0-9a-f]{64}", pdf_path.stem)
         else hashlib.sha256(pdf_path.read_bytes()).hexdigest()
     )
+
+
+def _text_source(pdf_path: Path) -> tuple[Path, str, str]:
+    document_id = _document_id(pdf_path)
     companion = TEXT_COMPANIONS.get(document_id)
     if companion and companion.exists():
-        return companion, "official_pdf_with_text_companion"
-    return pdf_path, "native_pdf_text"
+        return (
+            companion,
+            "official_pdf_with_text_companion",
+            _document_id(companion),
+        )
+    return pdf_path, "native_pdf_text", document_id
 
 
 def _page_score(text: str, statement: str) -> int:
@@ -79,7 +98,7 @@ def _page_score(text: str, statement: str) -> int:
 
 def locate_statements(pdf_path: Path) -> dict[str, dict[str, object]]:
     candidates: dict[str, dict[str, object]] = {}
-    text_path, _ = _text_source(pdf_path)
+    text_path, _, _ = _text_source(pdf_path)
     with fitz.open(text_path) as document:
         ranked_by_statement: dict[str, list[dict[str, object]]] = {
             statement: [] for statement in STATEMENT_TITLES
@@ -198,6 +217,35 @@ def _period_end(value: str) -> str:
     return f"{value}-12-31" if re.fullmatch(r"20\d{2}", value) else value
 
 
+def _left_statement_column(
+    pdf_path: Path,
+    page_index: int,
+) -> tuple[str, str]:
+    text_path, _, _ = _text_source(pdf_path)
+    with fitz.open(text_path) as document:
+        page = document[page_index]
+        clip = fitz.Rect(0, 0, page.rect.width * 0.52, page.rect.height)
+        text = page.get_text("text", clip=clip, sort=True)
+        block_text = "\n".join(
+            str(block[4])
+            for block in page.get_text("blocks", clip=clip, sort=True)
+        )
+    return text, block_text
+
+
+def _source_visible_required_labels(
+    evidence: str,
+    company: str,
+    statement: str,
+) -> tuple[str, ...]:
+    compact = " ".join(unicodedata.normalize("NFKC", evidence).casefold().split())
+    return tuple(
+        label
+        for label in REQUIRED_ROW_ANCHORS.get((company, statement), ())
+        if " ".join(unicodedata.normalize("NFKC", label).casefold().split()) in compact
+    )
+
+
 def extract_report(
     company: Company,
     report_year: int,
@@ -205,18 +253,21 @@ def extract_report(
     artifacts_dir: Path = Path("artifacts"),
     persist: bool = True,
 ) -> pd.DataFrame:
-    document_id = hashlib.sha256(pdf_path.read_bytes()).hexdigest()
-    _, source_text_method = _text_source(pdf_path)
+    _, source_text_method, document_id = _text_source(pdf_path)
     candidates = locate_statements(pdf_path)
     rows: list[dict[str, object]] = []
 
     for statement, candidate in candidates.items():
         evidence = str(candidate["text"])
+        block_evidence = str(candidate["block_text"])
         focus_hint = ""
         if (
             statement == "income_statement"
             and "statement of other comprehensive income" in evidence.casefold()
         ):
+            evidence, block_evidence = _left_statement_column(
+                pdf_path, int(candidate["page_index"])
+            )
             focus_hint = (
                 "The page also contains a separate statement of other comprehensive "
                 "income. Extract only the table headed Consolidated Income Statement. "
@@ -224,10 +275,15 @@ def extract_report(
                 "income table."
             )
         try:
-            extraction = extract_statement(statement, evidence, focus_hint)
+            extraction = extract_statement(
+                statement,
+                evidence,
+                focus_hint,
+                _source_visible_required_labels(evidence, company.slug, statement),
+            )
             _validate_evidence(
                 extraction,
-                f"{evidence}\n\nBLOCK-ORDER EVIDENCE:\n{candidate['block_text']}",
+                f"{evidence}\n\nBLOCK-ORDER EVIDENCE:\n{block_evidence}",
             )
         except Exception as exc:
             raise RuntimeError(
