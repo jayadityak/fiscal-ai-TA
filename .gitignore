@@ -9,3 +9,4 @@ dist/
 tmp/
 *.inspect.ndjson
 ~$*.xlsx
+INTERVIEW_PREP.md
