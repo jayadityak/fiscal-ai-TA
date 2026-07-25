@@ -261,6 +261,7 @@ h1 span {
   border-radius: 50%;
   color: var(--green) !important;
   display: inline-flex;
+  flex: 0 0 29px;
   height: 29px;
   justify-content: center;
   width: 29px;

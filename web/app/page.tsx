@@ -141,8 +141,8 @@ export default function Home() {
               <strong>{data.summary.consistencyCrossVerified}</strong>
               <span>
                 {" "}
-                figures cross-verified across independent reports ·{" "}
-                {data.summary.consistencyUnexplained} unexplained differences
+                figures matched in ≥2 annual reports ·{" "}
+                {data.summary.consistencyUnexplained} conflicts
               </span>
             </div>
           </div>
