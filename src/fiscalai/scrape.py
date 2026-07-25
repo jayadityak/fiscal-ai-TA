@@ -87,20 +87,36 @@ def scrape_company(
     session = requests.Session()
     session.headers["User-Agent"] = USER_AGENT
     discovered: dict[str, dict[str, str]] = {}
+    rows: list[dict[str, object]] = []
 
-    for url in company.seed_pdf_urls:
-        discovered[url] = {
-            "url": url,
-            "archive_url": company.archive_pages[0],
-            "link_text": f"{company.name} targeted annual report",
-            "context": f"Configured filing target for {company.name}",
-        }
-
+    # 1) Crawl the IR archive pages first — this is the required discovery step.
+    #    Anything the crawl surfaces is tagged `crawl` so the manifest can show
+    #    the filings were discovered rather than hand-fed.
     for archive_url in company.archive_pages:
         try:
             response = session.get(archive_url, timeout=30)
             response.raise_for_status()
-        except requests.RequestException:
+        except requests.RequestException as exc:
+            # Surface an unreachable archive in the manifest instead of silently
+            # dropping it, so a broken crawl is not masked by the seed fallback.
+            rows.append(
+                {
+                    "company": company.slug,
+                    "url": archive_url,
+                    "archive_url": archive_url,
+                    "link_text": "",
+                    "context": "",
+                    "discovery_source": "crawl",
+                    "filename": "",
+                    "sha256": "",
+                    "local_path": "",
+                    "document_type": "archive_page",
+                    "classification_score": 0,
+                    "report_year": None,
+                    "status": "archive_unreachable",
+                    "error": str(exc),
+                }
+            )
             continue
         soup = BeautifulSoup(response.text, "html.parser")
         for anchor in soup.select("a[href]"):
@@ -113,9 +129,23 @@ def scrape_company(
                 "archive_url": archive_url,
                 "link_text": anchor.get_text(" ", strip=True),
                 "context": context[:500],
+                "discovery_source": "crawl",
             }
 
-    rows: list[dict[str, object]] = []
+    # 2) Seed URLs are a transparent fallback: they fill only the reports the
+    #    crawl did not surface, and are tagged `seed_fallback` so a reviewer can
+    #    see exactly where discovery fell back to a configured URL.
+    for url in company.seed_pdf_urls:
+        if url in discovered:
+            continue  # crawl already found it — discovery proven, seed redundant.
+        discovered[url] = {
+            "url": url,
+            "archive_url": company.archive_pages[0],
+            "link_text": f"{company.name} annual report (seed fallback)",
+            "context": "Seed fallback — crawl did not surface this URL",
+            "discovery_source": "seed_fallback",
+        }
+
     for url, link in sorted(discovered.items()):
         filename = unquote(Path(urlparse(url).path).name)
         try:

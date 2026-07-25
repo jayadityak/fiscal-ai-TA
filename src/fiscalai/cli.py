@@ -34,6 +34,14 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command", required=True)
     scrape = subparsers.add_parser("scrape")
     scrape.add_argument("company", choices=[*COMPANIES, "all"])
+    discover = subparsers.add_parser(
+        "discover", help="browser-driven report discovery from each company's entry point"
+    )
+    discover.add_argument("company", choices=[*COMPANIES, "all"])
+    discover.add_argument(
+        "--headless", action="store_true",
+        help="run the browser headless (note: site bot protection may block it)",
+    )
     locate = subparsers.add_parser("locate")
     locate.add_argument("company", choices=COMPANIES)
     locate.add_argument("--year", type=int, default=2025)
@@ -50,6 +58,35 @@ def main() -> None:
         for slug in slugs:
             manifest = scrape_company(get_company(slug))
         print(f"Wrote {len(manifest)} filings to {artifacts / 'filings_manifest.csv'}")
+        return
+
+    if args.command == "discover":
+        # Browser-driven discovery: a real browser navigates each company's entry
+        # point, passing cookie banners / age gates / bot protection, and returns
+        # the reports. Written to a SEPARATE manifest so the committed
+        # filings_manifest.csv (the verified extraction source) is never touched.
+        from .browser_discover import browser_scrape_company
+
+        artifacts.mkdir(exist_ok=True)
+        slugs = COMPANIES if args.company == "all" else (args.company,)
+        rows: list[dict] = []
+        for slug in slugs:
+            company = get_company(slug)
+            print(
+                f"\nDiscovering {company.name} across "
+                f"{len(company.entry_points)} entry point(s)",
+                flush=True,
+            )
+            found = browser_scrape_company(company, headed=not args.headless)
+            for r in found:
+                print(
+                    f"  {r['report_year']}  {r['document_type']:16} "
+                    f"{r['status']:10} [{r['discovery_source']}] {r['filename'][:48]}"
+                )
+            rows.extend(found)
+        out = artifacts / "discovered_manifest.csv"
+        pd.DataFrame(rows).to_csv(out, index=False)
+        print(f"\nWrote {len(rows)} browser-discovered report(s) to {out}")
         return
 
     manifest_path = artifacts / "filings_manifest.csv"

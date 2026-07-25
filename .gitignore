@@ -10,3 +10,5 @@ tmp/
 *.inspect.ndjson
 ~$*.xlsx
 INTERVIEW_PREP.md
+*.BACKUP.*
+web/.claude/

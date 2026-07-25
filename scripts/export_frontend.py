@@ -4,7 +4,11 @@ from __future__ import annotations
 
 import csv
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+from fiscalai.consistency import write_consistency  # noqa: E402
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -71,6 +75,10 @@ def main() -> None:
     manifest = read_csv("filings_manifest.csv")
     validation = read_csv("validation.csv")
     reconciliation = read_csv("reconciliation.csv")
+    # Cross-report consistency: independent extractions of the same cell agree.
+    consistency = write_consistency(
+        ARTIFACTS / "lineage.csv", ARTIFACTS / "consistency.csv"
+    )
 
     companies = []
     for slug, metadata in COMPANIES.items():
@@ -143,6 +151,10 @@ def main() -> None:
                 row["status"] == "passed" for row in reconciliation
             ),
             "reconciliationTotal": len(reconciliation),
+            "consistencyCrossVerified": consistency["crossVerified"],
+            "consistencyConsistent": consistency["consistent"],
+            "consistencyRestated": consistency["restated"],
+            "consistencyUnexplained": consistency["unexplained"],
         },
         "companies": companies,
     }

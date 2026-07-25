@@ -11,6 +11,12 @@ class Company:
     seed_pdf_urls: tuple[str, ...]
     target_years: tuple[int, ...]
     selected_report_years: tuple[int, ...]
+    # Entry points for browser-driven discovery (`fiscalai discover`): URLs a
+    # human would start from, tried in order until all target years are found.
+    # `follow_pattern` optionally lets the crawler take one hop into a matching
+    # reports/archive link when an entry page lists no PDFs directly.
+    entry_points: tuple[str, ...] = ()
+    follow_pattern: str | None = None
 
 
 NESTLE = Company(
@@ -31,6 +37,11 @@ NESTLE = Company(
     ),
     target_years=tuple(range(2016, 2026)),
     selected_report_years=(2017, 2019, 2021, 2023, 2025),
+    # Nestlé's IR site is behind Cloudflare Turnstile, which standard browser
+    # automation cannot reliably pass; a navigable aggregator is the entry point.
+    # The aggregator lags ~2 years, so the current-year report falls back to the
+    # configured direct URL.
+    entry_points=("https://www.annualreports.com/Company/nestle",),
 )
 
 HEINEKEN = Company(
@@ -57,6 +68,13 @@ HEINEKEN = Company(
     ),
     target_years=tuple(range(2016, 2026)),
     selected_report_years=(2017, 2019, 2021, 2023, 2025),
+    # Historical reports from a navigable aggregator; the current-year report from
+    # Heineken's own site, whose JS age gate the browser fills in automatically.
+    entry_points=(
+        "https://www.annualreports.com/Company/heineken-nv",
+        "https://www.theheinekencompany.com/investors/results-reports-webcasts-presentations",
+    ),
+    follow_pattern="annual|report|result",
 )
 
 UNILEVER = Company(
@@ -82,6 +100,13 @@ UNILEVER = Company(
     ),
     target_years=tuple(range(2016, 2026)),
     selected_report_years=(2017, 2019, 2021, 2023, 2025),
+    # Historical reports from a navigable aggregator; the current-year report from
+    # Unilever's own archive, whose Akamai protection a headed browser passes.
+    entry_points=(
+        "https://www.annualreports.com/Company/unilever-plc",
+        "https://www.unilever.com/investors/annual-report-and-accounts/"
+        "archive-of-annual-report-and-accounts/",
+    ),
 )
 
 COMPANIES = {company.slug: company for company in (NESTLE, HEINEKEN, UNILEVER)}

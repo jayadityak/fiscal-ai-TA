@@ -135,6 +135,17 @@ export default function Home() {
               <span> deterministic checks passed</span>
             </div>
           </div>
+          <div className="evidence-footer">
+            <span className="check-mark">✓</span>
+            <div>
+              <strong>{data.summary.consistencyCrossVerified}</strong>
+              <span>
+                {" "}
+                figures cross-verified across independent reports ·{" "}
+                {data.summary.consistencyUnexplained} unexplained differences
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
