@@ -152,9 +152,8 @@ def main() -> None:
             ),
             "reconciliationTotal": len(reconciliation),
             "consistencyCrossVerified": consistency["crossVerified"],
-            "consistencyConsistent": consistency["consistent"],
-            "consistencyRestated": consistency["restated"],
-            "consistencyUnexplained": consistency["unexplained"],
+            "consistencyIdentical": consistency["identical"],
+            "consistencyDiffering": consistency["differing"],
         },
         "companies": companies,
     }

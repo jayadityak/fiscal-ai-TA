@@ -138,11 +138,11 @@ export default function Home() {
           <div className="evidence-footer">
             <span className="check-mark">✓</span>
             <div>
-              <strong>{data.summary.consistencyCrossVerified}</strong>
+              <strong>{data.summary.consistencyIdentical}</strong>
               <span>
                 {" "}
-                figures matched in ≥2 annual reports ·{" "}
-                {data.summary.consistencyUnexplained} conflicts
+                figures identical across independent reports ·{" "}
+                {data.summary.consistencyDiffering} differing across editions
               </span>
             </div>
           </div>

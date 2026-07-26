@@ -136,8 +136,11 @@ heineken,balance_sheet,investments in associates and joint ventures::1,2025-12-3
 heineken,balance_sheet,liabilities associated with assets classified as held for sale::1,2016-12-31,1,1,single_source
 heineken,balance_sheet,liabilities associated with assets classified as held for sale::1,2017-12-31,1,1,single_source
 heineken,balance_sheet,liabilities associated with assets classified as held for sale::1,2018-12-31,1,1,single_source
+heineken,balance_sheet,liabilities associated with assets classified as held for sale::1,2019-12-31,1,1,single_source
+heineken,balance_sheet,liabilities associated with assets classified as held for sale::1,2020-12-31,1,1,single_source
 heineken,balance_sheet,liabilities associated with assets classified as held for sale::1,2021-12-31,1,1,single_source
 heineken,balance_sheet,liabilities associated with assets classified as held for sale::1,2022-12-31,1,1,single_source
+heineken,balance_sheet,liabilities associated with assets classified as held for sale::1,2023-12-31,1,1,single_source
 heineken,balance_sheet,loans and advances to customers::1,2016-12-31,1,1,single_source
 heineken,balance_sheet,loans and advances to customers::1,2017-12-31,1,1,single_source
 heineken,balance_sheet,loans and advances to customers::1,2018-12-31,1,1,single_source
@@ -243,6 +246,7 @@ heineken,balance_sheet,shareholders equity::1,2023-12-31,1,1,single_source
 heineken,balance_sheet,shareholders equity::1,2024-12-31,1,1,single_source
 heineken,balance_sheet,shareholders equity::1,2025-12-31,1,1,single_source
 heineken,balance_sheet,tax liabilities::1,2016-12-31,1,1,single_source
+heineken,balance_sheet,tax liabilities::1,2017-12-31,1,1,single_source
 heineken,balance_sheet,total assets::1,2016-12-31,1,1,single_source
 heineken,balance_sheet,total assets::1,2017-12-31,1,1,single_source
 heineken,balance_sheet,total assets::1,2018-12-31,1,1,single_source
@@ -353,6 +357,7 @@ heineken,cash_flow,acquisition of non controlling interests::1,2020-12-31,1,1,si
 heineken,cash_flow,acquisition of non controlling interests::1,2021-12-31,1,1,single_source
 heineken,cash_flow,acquisition of non controlling interests::1,2022-12-31,1,1,single_source
 heineken,cash_flow,acquisition of non controlling interests::1,2023-12-31,1,1,single_source
+heineken,cash_flow,acquisition of non controlling interests::1,2024-12-31,1,1,single_source
 heineken,cash_flow,acquisition of non controlling interests::1,2025-12-31,1,1,single_source
 heineken,cash_flow,acquisition of subsidiaries net of cash acquired::1,2016-12-31,1,1,single_source
 heineken,cash_flow,acquisition of subsidiaries net of cash acquired::1,2017-12-31,1,1,single_source
@@ -514,6 +519,7 @@ heineken,cash_flow,change in trade and other receivables::1,2022-12-31,1,1,singl
 heineken,cash_flow,change in trade and other receivables::1,2023-12-31,1,1,single_source
 heineken,cash_flow,change in trade and other receivables::1,2024-12-31,1,1,single_source
 heineken,cash_flow,change in trade and other receivables::1,2025-12-31,1,1,single_source
+heineken,cash_flow,disposal of associates joint ventures and other investments::1,2016-12-31,1,1,single_source
 heineken,cash_flow,disposal of associates joint ventures and other investments::1,2017-12-31,1,1,single_source
 heineken,cash_flow,disposal of associates joint ventures and other investments::1,2018-12-31,1,1,single_source
 heineken,cash_flow,disposal of associates joint ventures and other investments::1,2019-12-31,1,1,single_source
@@ -663,8 +669,10 @@ heineken,cash_flow,other non cash items::1,2023-12-31,1,1,single_source
 heineken,cash_flow,other non cash items::1,2024-12-31,1,1,single_source
 heineken,cash_flow,other non cash items::1,2025-12-31,1,1,single_source
 heineken,cash_flow,other::1,2016-12-31,1,1,single_source
+heineken,cash_flow,other::1,2017-12-31,1,1,single_source
 heineken,cash_flow,other::1,2018-12-31,1,1,single_source
 heineken,cash_flow,other::1,2019-12-31,1,1,single_source
+heineken,cash_flow,payment of principal portion of lease commitments::1,2018-12-31,1,1,single_source
 heineken,cash_flow,payment of principal portion of lease commitments::1,2019-12-31,1,1,single_source
 heineken,cash_flow,payment of principal portion of lease commitments::1,2020-12-31,1,1,single_source
 heineken,cash_flow,payment of principal portion of lease commitments::1,2021-12-31,1,1,single_source
@@ -723,6 +731,7 @@ heineken,cash_flow,purchase of property plant and equipment::1,2023-12-31,1,1,si
 heineken,cash_flow,purchase of property plant and equipment::1,2024-12-31,1,1,single_source
 heineken,cash_flow,purchase of property plant and equipment::1,2025-12-31,1,1,single_source
 heineken,cash_flow,purchase own shares and shares issued::1,2016-12-31,1,1,single_source
+heineken,cash_flow,purchase own shares and shares issued::1,2017-12-31,1,1,single_source
 heineken,cash_flow,purchase own shares and shares issued::1,2018-12-31,1,1,single_source
 heineken,cash_flow,purchase own shares and shares issued::1,2019-12-31,1,1,single_source
 heineken,cash_flow,purchase own shares and shares issued::1,2020-12-31,1,1,single_source
@@ -1090,6 +1099,7 @@ nestle,balance_sheet,derivative assets::1,2022-12-31,1,1,single_source
 nestle,balance_sheet,derivative assets::1,2023-12-31,1,1,single_source
 nestle,balance_sheet,derivative assets::1,2024-12-31,1,1,single_source
 nestle,balance_sheet,derivative assets::1,2025-12-31,1,1,single_source
+nestle,balance_sheet,derivative assets::2,2022-12-31,1,1,single_source
 nestle,balance_sheet,derivative assets::2,2023-12-31,1,1,single_source
 nestle,balance_sheet,derivative assets::2,2024-12-31,1,1,single_source
 nestle,balance_sheet,derivative assets::2,2025-12-31,1,1,single_source
@@ -1204,6 +1214,7 @@ nestle,balance_sheet,liabilities directly associated with assets held for sale::
 nestle,balance_sheet,liabilities directly associated with assets held for sale::1,2020-12-31,1,1,single_source
 nestle,balance_sheet,liabilities directly associated with assets held for sale::1,2021-12-31,1,1,single_source
 nestle,balance_sheet,liabilities directly associated with assets held for sale::1,2022-12-31,1,1,single_source
+nestle,balance_sheet,liabilities directly associated with assets held for sale::1,2023-12-31,1,1,single_source
 nestle,balance_sheet,liabilities directly associated with assets held for sale::1,2024-12-31,1,1,single_source
 nestle,balance_sheet,liabilities directly associated with assets held for sale::1,2025-12-31,1,1,single_source
 nestle,balance_sheet,non controlling interests::1,2016-12-31,1,1,single_source
@@ -1436,6 +1447,7 @@ nestle,balance_sheet,treasury shares::1,2022-12-31,1,1,single_source
 nestle,balance_sheet,treasury shares::1,2023-12-31,1,1,single_source
 nestle,balance_sheet,treasury shares::1,2024-12-31,1,1,single_source
 nestle,balance_sheet,treasury shares::1,2025-12-31,1,1,single_source
+nestle,cash_flow,acquisition net of disposal in long term investments::1,2024-12-31,1,1,single_source
 nestle,cash_flow,acquisition net of disposal in long term investments::1,2025-12-31,1,1,single_source
 nestle,cash_flow,acquisition net of disposal of non controlling interests::1,2016-12-31,1,1,single_source
 nestle,cash_flow,acquisition net of disposal of non controlling interests::1,2017-12-31,1,1,single_source
@@ -1491,6 +1503,7 @@ nestle,cash_flow,cash and cash equivalents at end of year::1,2022-12-31,1,1,sing
 nestle,cash_flow,cash and cash equivalents at end of year::1,2023-12-31,1,1,single_source
 nestle,cash_flow,cash and cash equivalents at end of year::1,2024-12-31,1,1,single_source
 nestle,cash_flow,cash and cash equivalents at end of year::1,2025-12-31,1,1,single_source
+nestle,cash_flow,cash and cash equivalents classified as held for sale::1,2020-12-31,1,1,single_source
 nestle,cash_flow,cash and cash equivalents classified as held for sale::1,2021-12-31,1,1,single_source
 nestle,cash_flow,cash and cash equivalents classified as held for sale::1,2024-12-31,1,1,single_source
 nestle,cash_flow,cash and cash equivalents classified as held for sale::1,2025-12-31,1,1,single_source
@@ -1694,6 +1707,7 @@ nestle,cash_flow,investments in associates and joint ventures::1,2020-12-31,1,1,
 nestle,cash_flow,investments in associates and joint ventures::1,2021-12-31,1,1,single_source
 nestle,cash_flow,net cash flows from treasury activities::1,2016-12-31,1,1,single_source
 nestle,cash_flow,net cash flows from treasury activities::1,2017-12-31,1,1,single_source
+nestle,cash_flow,net result on disposal of businesses::1,2016-12-31,1,1,single_source
 nestle,cash_flow,net result on disposal of businesses::1,2017-12-31,1,1,single_source
 nestle,cash_flow,net result on disposal of businesses::1,2018-12-31,1,1,single_source
 nestle,cash_flow,net result on disposal of businesses::1,2019-12-31,1,1,single_source
@@ -2430,69 +2444,73 @@ unilever,balance_sheet,unfunded schemes::1,2024-12-31,1,1,single_source
 unilever,balance_sheet,unfunded schemes::1,2025-12-31,1,1,single_source
 unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2015-12-31,1,1,single_source
 unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2016-12-31,1,1,single_source
-unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2017-12-31,2,1,consistent
+unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2017-12-31,2,1,identical
 unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2018-12-31,1,1,single_source
-unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2019-12-31,2,1,consistent
+unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2019-12-31,2,1,identical
 unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2020-12-31,1,1,single_source
-unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2021-12-31,2,1,consistent
+unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2021-12-31,2,1,identical
 unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2022-12-31,1,1,single_source
-unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2023-12-31,2,2,restated
+unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2024-12-31,1,1,single_source
 unilever,cash_flow,acquisition of businesses and investments in joint ventures and associates::1,2025-12-31,1,1,single_source
 unilever,cash_flow,acquisition of other non current investments::1,2015-12-31,1,1,single_source
 unilever,cash_flow,acquisition of other non current investments::1,2016-12-31,1,1,single_source
-unilever,cash_flow,acquisition of other non current investments::1,2017-12-31,2,1,consistent
+unilever,cash_flow,acquisition of other non current investments::1,2017-12-31,2,1,identical
 unilever,cash_flow,acquisition of other non current investments::1,2018-12-31,1,1,single_source
-unilever,cash_flow,acquisition of other non current investments::1,2019-12-31,2,1,consistent
+unilever,cash_flow,acquisition of other non current investments::1,2019-12-31,2,1,identical
 unilever,cash_flow,acquisition of other non current investments::1,2020-12-31,1,1,single_source
-unilever,cash_flow,acquisition of other non current investments::1,2021-12-31,2,1,consistent
+unilever,cash_flow,acquisition of other non current investments::1,2021-12-31,2,1,identical
 unilever,cash_flow,acquisition of other non current investments::1,2022-12-31,1,1,single_source
-unilever,cash_flow,acquisition of other non current investments::1,2023-12-31,2,1,consistent
+unilever,cash_flow,acquisition of other non current investments::1,2023-12-31,2,1,identical
 unilever,cash_flow,acquisition of other non current investments::1,2024-12-31,1,1,single_source
 unilever,cash_flow,acquisition of other non current investments::1,2025-12-31,1,1,single_source
 unilever,cash_flow,additional financial liabilities::1,2015-12-31,1,1,single_source
 unilever,cash_flow,additional financial liabilities::1,2016-12-31,1,1,single_source
-unilever,cash_flow,additional financial liabilities::1,2017-12-31,2,1,consistent
+unilever,cash_flow,additional financial liabilities::1,2017-12-31,2,1,identical
 unilever,cash_flow,additional financial liabilities::1,2018-12-31,1,1,single_source
-unilever,cash_flow,additional financial liabilities::1,2019-12-31,2,1,consistent
+unilever,cash_flow,additional financial liabilities::1,2019-12-31,2,1,identical
 unilever,cash_flow,additional financial liabilities::1,2020-12-31,1,1,single_source
-unilever,cash_flow,additional financial liabilities::1,2021-12-31,2,1,consistent
+unilever,cash_flow,additional financial liabilities::1,2021-12-31,2,1,identical
 unilever,cash_flow,additional financial liabilities::1,2022-12-31,1,1,single_source
-unilever,cash_flow,additional financial liabilities::1,2023-12-31,2,2,restated
+unilever,cash_flow,additional financial liabilities::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,additional financial liabilities::1,2024-12-31,1,1,single_source
 unilever,cash_flow,additional financial liabilities::1,2025-12-31,1,1,single_source
-unilever,cash_flow,buyback of preference shares::1,2017-12-31,2,1,consistent
+unilever,cash_flow,buyback of preference shares::1,2015-12-31,1,1,single_source
+unilever,cash_flow,buyback of preference shares::1,2016-12-31,1,1,single_source
+unilever,cash_flow,buyback of preference shares::1,2017-12-31,2,1,identical
+unilever,cash_flow,buyback of preference shares::1,2018-12-31,1,1,single_source
+unilever,cash_flow,buyback of preference shares::1,2019-12-31,1,1,single_source
 unilever,cash_flow,capital element of lease rental payments::1,2015-12-31,1,1,single_source
 unilever,cash_flow,capital element of lease rental payments::1,2016-12-31,1,1,single_source
-unilever,cash_flow,capital element of lease rental payments::1,2017-12-31,2,2,restated
+unilever,cash_flow,capital element of lease rental payments::1,2017-12-31,2,2,differs_across_editions
 unilever,cash_flow,capital element of lease rental payments::1,2018-12-31,1,1,single_source
-unilever,cash_flow,capital element of lease rental payments::1,2019-12-31,2,1,consistent
+unilever,cash_flow,capital element of lease rental payments::1,2019-12-31,2,1,identical
 unilever,cash_flow,capital element of lease rental payments::1,2020-12-31,1,1,single_source
-unilever,cash_flow,capital element of lease rental payments::1,2021-12-31,2,1,consistent
+unilever,cash_flow,capital element of lease rental payments::1,2021-12-31,2,1,identical
 unilever,cash_flow,capital element of lease rental payments::1,2022-12-31,1,1,single_source
-unilever,cash_flow,capital element of lease rental payments::1,2023-12-31,2,2,restated
+unilever,cash_flow,capital element of lease rental payments::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,capital element of lease rental payments::1,2024-12-31,1,1,single_source
 unilever,cash_flow,capital element of lease rental payments::1,2025-12-31,1,1,single_source
 unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2015-12-31,1,1,single_source
 unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2016-12-31,1,1,single_source
-unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2017-12-31,2,1,consistent
+unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2017-12-31,2,1,identical
 unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2018-12-31,1,1,single_source
-unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2019-12-31,2,1,consistent
+unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2019-12-31,2,1,identical
 unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2020-12-31,1,1,single_source
-unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2021-12-31,2,1,consistent
+unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2021-12-31,2,1,identical
 unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2022-12-31,1,1,single_source
-unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2023-12-31,2,1,consistent
+unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2023-12-31,2,1,identical
 unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2024-12-31,1,1,single_source
 unilever,cash_flow,cash and cash equivalents at the beginning of the year::1,2025-12-31,1,1,single_source
 unilever,cash_flow,cash and cash equivalents at the end of the year::1,2015-12-31,1,1,single_source
 unilever,cash_flow,cash and cash equivalents at the end of the year::1,2016-12-31,1,1,single_source
-unilever,cash_flow,cash and cash equivalents at the end of the year::1,2017-12-31,2,1,consistent
+unilever,cash_flow,cash and cash equivalents at the end of the year::1,2017-12-31,2,1,identical
 unilever,cash_flow,cash and cash equivalents at the end of the year::1,2018-12-31,1,1,single_source
-unilever,cash_flow,cash and cash equivalents at the end of the year::1,2019-12-31,2,1,consistent
+unilever,cash_flow,cash and cash equivalents at the end of the year::1,2019-12-31,2,1,identical
 unilever,cash_flow,cash and cash equivalents at the end of the year::1,2020-12-31,1,1,single_source
-unilever,cash_flow,cash and cash equivalents at the end of the year::1,2021-12-31,2,1,consistent
+unilever,cash_flow,cash and cash equivalents at the end of the year::1,2021-12-31,2,1,identical
 unilever,cash_flow,cash and cash equivalents at the end of the year::1,2022-12-31,1,1,single_source
-unilever,cash_flow,cash and cash equivalents at the end of the year::1,2023-12-31,2,1,consistent
+unilever,cash_flow,cash and cash equivalents at the end of the year::1,2023-12-31,2,1,identical
 unilever,cash_flow,cash and cash equivalents at the end of the year::1,2024-12-31,1,1,single_source
 unilever,cash_flow,cash and cash equivalents at the end of the year::1,2025-12-31,1,1,single_source
 unilever,cash_flow,cash flow from continuing operating activities::1,2023-12-31,1,1,single_source
@@ -2500,11 +2518,11 @@ unilever,cash_flow,cash flow from continuing operating activities::1,2024-12-31,
 unilever,cash_flow,cash flow from continuing operating activities::1,2025-12-31,1,1,single_source
 unilever,cash_flow,cash flow from operating activities::1,2015-12-31,1,1,single_source
 unilever,cash_flow,cash flow from operating activities::1,2016-12-31,1,1,single_source
-unilever,cash_flow,cash flow from operating activities::1,2017-12-31,2,2,restated
+unilever,cash_flow,cash flow from operating activities::1,2017-12-31,2,2,differs_across_editions
 unilever,cash_flow,cash flow from operating activities::1,2018-12-31,1,1,single_source
-unilever,cash_flow,cash flow from operating activities::1,2019-12-31,2,1,consistent
+unilever,cash_flow,cash flow from operating activities::1,2019-12-31,2,1,identical
 unilever,cash_flow,cash flow from operating activities::1,2020-12-31,1,1,single_source
-unilever,cash_flow,cash flow from operating activities::1,2021-12-31,2,1,consistent
+unilever,cash_flow,cash flow from operating activities::1,2021-12-31,2,1,identical
 unilever,cash_flow,cash flow from operating activities::1,2022-12-31,1,1,single_source
 unilever,cash_flow,cash flow from operating activities::1,2023-12-31,1,1,single_source
 unilever,cash_flow,cash flow from operations attributable to discontinued operations::1,2023-12-31,1,1,single_source
@@ -2512,101 +2530,101 @@ unilever,cash_flow,cash flow from operations attributable to discontinued operat
 unilever,cash_flow,cash flow from operations attributable to discontinued operations::1,2025-12-31,1,1,single_source
 unilever,cash_flow,changes in working capital::1,2015-12-31,1,1,single_source
 unilever,cash_flow,changes in working capital::1,2016-12-31,1,1,single_source
-unilever,cash_flow,changes in working capital::1,2017-12-31,2,1,consistent
+unilever,cash_flow,changes in working capital::1,2017-12-31,2,1,identical
 unilever,cash_flow,changes in working capital::1,2018-12-31,1,1,single_source
-unilever,cash_flow,changes in working capital::1,2019-12-31,2,1,consistent
+unilever,cash_flow,changes in working capital::1,2019-12-31,2,1,identical
 unilever,cash_flow,changes in working capital::1,2020-12-31,1,1,single_source
-unilever,cash_flow,changes in working capital::1,2021-12-31,2,1,consistent
+unilever,cash_flow,changes in working capital::1,2021-12-31,2,1,identical
 unilever,cash_flow,changes in working capital::1,2022-12-31,1,1,single_source
-unilever,cash_flow,changes in working capital::1,2023-12-31,2,2,restated
+unilever,cash_flow,changes in working capital::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,changes in working capital::1,2024-12-31,1,1,single_source
 unilever,cash_flow,changes in working capital::1,2025-12-31,1,1,single_source
 unilever,cash_flow,depreciation amortisation and impairment::1,2015-12-31,1,1,single_source
 unilever,cash_flow,depreciation amortisation and impairment::1,2016-12-31,1,1,single_source
-unilever,cash_flow,depreciation amortisation and impairment::1,2017-12-31,2,2,restated
+unilever,cash_flow,depreciation amortisation and impairment::1,2017-12-31,2,2,differs_across_editions
 unilever,cash_flow,depreciation amortisation and impairment::1,2018-12-31,1,1,single_source
-unilever,cash_flow,depreciation amortisation and impairment::1,2019-12-31,2,1,consistent
+unilever,cash_flow,depreciation amortisation and impairment::1,2019-12-31,2,1,identical
 unilever,cash_flow,depreciation amortisation and impairment::1,2020-12-31,1,1,single_source
-unilever,cash_flow,depreciation amortisation and impairment::1,2021-12-31,2,1,consistent
+unilever,cash_flow,depreciation amortisation and impairment::1,2021-12-31,2,1,identical
 unilever,cash_flow,depreciation amortisation and impairment::1,2022-12-31,1,1,single_source
-unilever,cash_flow,depreciation amortisation and impairment::1,2023-12-31,2,2,restated
+unilever,cash_flow,depreciation amortisation and impairment::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,depreciation amortisation and impairment::1,2024-12-31,1,1,single_source
 unilever,cash_flow,depreciation amortisation and impairment::1,2025-12-31,1,1,single_source
 unilever,cash_flow,disposal of businesses joint ventures and associates::1,2015-12-31,1,1,single_source
 unilever,cash_flow,disposal of businesses joint ventures and associates::1,2016-12-31,1,1,single_source
-unilever,cash_flow,disposal of businesses joint ventures and associates::1,2017-12-31,2,1,consistent
+unilever,cash_flow,disposal of businesses joint ventures and associates::1,2017-12-31,2,1,identical
 unilever,cash_flow,disposal of businesses joint ventures and associates::1,2018-12-31,1,1,single_source
-unilever,cash_flow,disposal of businesses joint ventures and associates::1,2019-12-31,2,1,consistent
+unilever,cash_flow,disposal of businesses joint ventures and associates::1,2019-12-31,2,1,identical
 unilever,cash_flow,disposal of businesses joint ventures and associates::1,2020-12-31,1,1,single_source
-unilever,cash_flow,disposal of businesses joint ventures and associates::1,2021-12-31,2,1,consistent
+unilever,cash_flow,disposal of businesses joint ventures and associates::1,2021-12-31,2,1,identical
 unilever,cash_flow,disposal of businesses joint ventures and associates::1,2022-12-31,1,1,single_source
-unilever,cash_flow,disposal of businesses joint ventures and associates::1,2023-12-31,2,1,consistent
+unilever,cash_flow,disposal of businesses joint ventures and associates::1,2023-12-31,2,1,identical
 unilever,cash_flow,disposal of businesses joint ventures and associates::1,2024-12-31,1,1,single_source
 unilever,cash_flow,disposal of businesses joint ventures and associates::1,2025-12-31,1,1,single_source
 unilever,cash_flow,disposal of other non current investments::1,2015-12-31,1,1,single_source
 unilever,cash_flow,disposal of other non current investments::1,2016-12-31,1,1,single_source
-unilever,cash_flow,disposal of other non current investments::1,2017-12-31,2,1,consistent
+unilever,cash_flow,disposal of other non current investments::1,2017-12-31,2,1,identical
 unilever,cash_flow,disposal of other non current investments::1,2018-12-31,1,1,single_source
-unilever,cash_flow,disposal of other non current investments::1,2019-12-31,2,1,consistent
+unilever,cash_flow,disposal of other non current investments::1,2019-12-31,2,1,identical
 unilever,cash_flow,disposal of other non current investments::1,2020-12-31,1,1,single_source
-unilever,cash_flow,disposal of other non current investments::1,2021-12-31,2,1,consistent
+unilever,cash_flow,disposal of other non current investments::1,2021-12-31,2,1,identical
 unilever,cash_flow,disposal of other non current investments::1,2022-12-31,1,1,single_source
-unilever,cash_flow,disposal of other non current investments::1,2023-12-31,2,1,consistent
+unilever,cash_flow,disposal of other non current investments::1,2023-12-31,2,1,identical
 unilever,cash_flow,disposal of other non current investments::1,2024-12-31,1,1,single_source
 unilever,cash_flow,disposal of other non current investments::1,2025-12-31,1,1,single_source
 unilever,cash_flow,disposal of property plant and equipment::1,2015-12-31,1,1,single_source
 unilever,cash_flow,disposal of property plant and equipment::1,2016-12-31,1,1,single_source
-unilever,cash_flow,disposal of property plant and equipment::1,2017-12-31,2,1,consistent
+unilever,cash_flow,disposal of property plant and equipment::1,2017-12-31,2,1,identical
 unilever,cash_flow,disposal of property plant and equipment::1,2018-12-31,1,1,single_source
-unilever,cash_flow,disposal of property plant and equipment::1,2019-12-31,2,1,consistent
+unilever,cash_flow,disposal of property plant and equipment::1,2019-12-31,2,1,identical
 unilever,cash_flow,disposal of property plant and equipment::1,2020-12-31,1,1,single_source
-unilever,cash_flow,disposal of property plant and equipment::1,2021-12-31,2,1,consistent
+unilever,cash_flow,disposal of property plant and equipment::1,2021-12-31,2,1,identical
 unilever,cash_flow,disposal of property plant and equipment::1,2022-12-31,1,1,single_source
-unilever,cash_flow,disposal of property plant and equipment::1,2023-12-31,2,2,restated
+unilever,cash_flow,disposal of property plant and equipment::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,disposal of property plant and equipment::1,2024-12-31,1,1,single_source
 unilever,cash_flow,disposal of property plant and equipment::1,2025-12-31,1,1,single_source
 unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2015-12-31,1,1,single_source
 unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2016-12-31,1,1,single_source
-unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2017-12-31,2,1,consistent
+unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2017-12-31,2,1,identical
 unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2018-12-31,1,1,single_source
-unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2019-12-31,2,1,consistent
+unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2019-12-31,2,1,identical
 unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2020-12-31,1,1,single_source
-unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2021-12-31,2,1,consistent
+unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2021-12-31,2,1,identical
 unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2022-12-31,1,1,single_source
-unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2023-12-31,2,1,consistent
+unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2023-12-31,2,1,identical
 unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2024-12-31,1,1,single_source
 unilever,cash_flow,dividends from joint ventures associates and other non current investments::1,2025-12-31,1,1,single_source
 unilever,cash_flow,dividends paid on ordinary share capital::1,2015-12-31,1,1,single_source
 unilever,cash_flow,dividends paid on ordinary share capital::1,2016-12-31,1,1,single_source
-unilever,cash_flow,dividends paid on ordinary share capital::1,2017-12-31,2,1,consistent
+unilever,cash_flow,dividends paid on ordinary share capital::1,2017-12-31,2,1,identical
 unilever,cash_flow,dividends paid on ordinary share capital::1,2018-12-31,1,1,single_source
-unilever,cash_flow,dividends paid on ordinary share capital::1,2019-12-31,2,1,consistent
+unilever,cash_flow,dividends paid on ordinary share capital::1,2019-12-31,2,1,identical
 unilever,cash_flow,dividends paid on ordinary share capital::1,2020-12-31,1,1,single_source
-unilever,cash_flow,dividends paid on ordinary share capital::1,2021-12-31,2,1,consistent
+unilever,cash_flow,dividends paid on ordinary share capital::1,2021-12-31,2,1,identical
 unilever,cash_flow,dividends paid on ordinary share capital::1,2022-12-31,1,1,single_source
-unilever,cash_flow,dividends paid on ordinary share capital::1,2023-12-31,2,1,consistent
+unilever,cash_flow,dividends paid on ordinary share capital::1,2023-12-31,2,1,identical
 unilever,cash_flow,dividends paid on ordinary share capital::1,2024-12-31,1,1,single_source
 unilever,cash_flow,dividends paid on ordinary share capital::1,2025-12-31,1,1,single_source
 unilever,cash_flow,effect of foreign exchange rate changes::1,2015-12-31,1,1,single_source
 unilever,cash_flow,effect of foreign exchange rate changes::1,2016-12-31,1,1,single_source
-unilever,cash_flow,effect of foreign exchange rate changes::1,2017-12-31,2,1,consistent
+unilever,cash_flow,effect of foreign exchange rate changes::1,2017-12-31,2,1,identical
 unilever,cash_flow,effect of foreign exchange rate changes::1,2018-12-31,1,1,single_source
-unilever,cash_flow,effect of foreign exchange rate changes::1,2019-12-31,2,1,consistent
+unilever,cash_flow,effect of foreign exchange rate changes::1,2019-12-31,2,1,identical
 unilever,cash_flow,effect of foreign exchange rate changes::1,2020-12-31,1,1,single_source
-unilever,cash_flow,effect of foreign exchange rate changes::1,2021-12-31,2,1,consistent
+unilever,cash_flow,effect of foreign exchange rate changes::1,2021-12-31,2,1,identical
 unilever,cash_flow,effect of foreign exchange rate changes::1,2022-12-31,1,1,single_source
-unilever,cash_flow,effect of foreign exchange rate changes::1,2023-12-31,2,1,consistent
+unilever,cash_flow,effect of foreign exchange rate changes::1,2023-12-31,2,1,identical
 unilever,cash_flow,effect of foreign exchange rate changes::1,2024-12-31,1,1,single_source
 unilever,cash_flow,effect of foreign exchange rate changes::1,2025-12-31,1,1,single_source
 unilever,cash_flow,elimination of losses profits on disposals::1,2015-12-31,1,1,single_source
 unilever,cash_flow,elimination of losses profits on disposals::1,2016-12-31,1,1,single_source
-unilever,cash_flow,elimination of losses profits on disposals::1,2017-12-31,2,1,consistent
+unilever,cash_flow,elimination of losses profits on disposals::1,2017-12-31,2,1,identical
 unilever,cash_flow,elimination of losses profits on disposals::1,2018-12-31,1,1,single_source
-unilever,cash_flow,elimination of losses profits on disposals::1,2019-12-31,2,1,consistent
+unilever,cash_flow,elimination of losses profits on disposals::1,2019-12-31,2,1,identical
 unilever,cash_flow,elimination of losses profits on disposals::1,2020-12-31,1,1,single_source
-unilever,cash_flow,elimination of losses profits on disposals::1,2021-12-31,2,1,consistent
+unilever,cash_flow,elimination of losses profits on disposals::1,2021-12-31,2,1,identical
 unilever,cash_flow,elimination of losses profits on disposals::1,2022-12-31,1,1,single_source
-unilever,cash_flow,elimination of losses profits on disposals::1,2023-12-31,2,2,restated
+unilever,cash_flow,elimination of losses profits on disposals::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,elimination of losses profits on disposals::1,2024-12-31,1,1,single_source
 unilever,cash_flow,elimination of losses profits on disposals::1,2025-12-31,1,1,single_source
 unilever,cash_flow,income tax paid from discontinued operation::1,2023-12-31,1,1,single_source
@@ -2617,11 +2635,11 @@ unilever,cash_flow,income tax paid on continuing operations::1,2024-12-31,1,1,si
 unilever,cash_flow,income tax paid on continuing operations::1,2025-12-31,1,1,single_source
 unilever,cash_flow,income tax paid::1,2015-12-31,1,1,single_source
 unilever,cash_flow,income tax paid::1,2016-12-31,1,1,single_source
-unilever,cash_flow,income tax paid::1,2017-12-31,2,1,consistent
+unilever,cash_flow,income tax paid::1,2017-12-31,2,1,identical
 unilever,cash_flow,income tax paid::1,2018-12-31,1,1,single_source
-unilever,cash_flow,income tax paid::1,2019-12-31,2,1,consistent
+unilever,cash_flow,income tax paid::1,2019-12-31,2,1,identical
 unilever,cash_flow,income tax paid::1,2020-12-31,1,1,single_source
-unilever,cash_flow,income tax paid::1,2021-12-31,2,1,consistent
+unilever,cash_flow,income tax paid::1,2021-12-31,2,1,identical
 unilever,cash_flow,income tax paid::1,2022-12-31,1,1,single_source
 unilever,cash_flow,income tax paid::1,2023-12-31,1,1,single_source
 unilever,cash_flow,interest and preference dividends paid::1,2015-12-31,1,1,single_source
@@ -2629,33 +2647,33 @@ unilever,cash_flow,interest and preference dividends paid::1,2016-12-31,1,1,sing
 unilever,cash_flow,interest and preference dividends paid::1,2017-12-31,1,1,single_source
 unilever,cash_flow,interest paid::1,2017-12-31,1,1,single_source
 unilever,cash_flow,interest paid::1,2018-12-31,1,1,single_source
-unilever,cash_flow,interest paid::1,2019-12-31,2,1,consistent
+unilever,cash_flow,interest paid::1,2019-12-31,2,1,identical
 unilever,cash_flow,interest paid::1,2020-12-31,1,1,single_source
-unilever,cash_flow,interest paid::1,2021-12-31,2,1,consistent
+unilever,cash_flow,interest paid::1,2021-12-31,2,1,identical
 unilever,cash_flow,interest paid::1,2022-12-31,1,1,single_source
-unilever,cash_flow,interest paid::1,2023-12-31,2,2,restated
+unilever,cash_flow,interest paid::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,interest paid::1,2024-12-31,1,1,single_source
 unilever,cash_flow,interest paid::1,2025-12-31,1,1,single_source
 unilever,cash_flow,interest received::1,2015-12-31,1,1,single_source
 unilever,cash_flow,interest received::1,2016-12-31,1,1,single_source
-unilever,cash_flow,interest received::1,2017-12-31,2,1,consistent
+unilever,cash_flow,interest received::1,2017-12-31,2,1,identical
 unilever,cash_flow,interest received::1,2018-12-31,1,1,single_source
-unilever,cash_flow,interest received::1,2019-12-31,2,1,consistent
+unilever,cash_flow,interest received::1,2019-12-31,2,1,identical
 unilever,cash_flow,interest received::1,2020-12-31,1,1,single_source
-unilever,cash_flow,interest received::1,2021-12-31,2,1,consistent
+unilever,cash_flow,interest received::1,2021-12-31,2,1,identical
 unilever,cash_flow,interest received::1,2022-12-31,1,1,single_source
-unilever,cash_flow,interest received::1,2023-12-31,2,2,restated
+unilever,cash_flow,interest received::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,interest received::1,2024-12-31,1,1,single_source
 unilever,cash_flow,interest received::1,2025-12-31,1,1,single_source
 unilever,cash_flow,inventories::1,2015-12-31,1,1,single_source
 unilever,cash_flow,inventories::1,2016-12-31,1,1,single_source
-unilever,cash_flow,inventories::1,2017-12-31,2,1,consistent
+unilever,cash_flow,inventories::1,2017-12-31,2,1,identical
 unilever,cash_flow,inventories::1,2018-12-31,1,1,single_source
-unilever,cash_flow,inventories::1,2019-12-31,2,1,consistent
+unilever,cash_flow,inventories::1,2019-12-31,2,1,identical
 unilever,cash_flow,inventories::1,2020-12-31,1,1,single_source
-unilever,cash_flow,inventories::1,2021-12-31,2,1,consistent
+unilever,cash_flow,inventories::1,2021-12-31,2,1,identical
 unilever,cash_flow,inventories::1,2022-12-31,1,1,single_source
-unilever,cash_flow,inventories::1,2023-12-31,2,2,restated
+unilever,cash_flow,inventories::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,inventories::1,2024-12-31,1,1,single_source
 unilever,cash_flow,inventories::1,2025-12-31,1,1,single_source
 unilever,cash_flow,net cash flow from continuing operating activities::1,2023-12-31,1,1,single_source
@@ -2669,24 +2687,24 @@ unilever,cash_flow,net cash flow used in continuing investing activities::1,2024
 unilever,cash_flow,net cash flow used in continuing investing activities::1,2025-12-31,1,1,single_source
 unilever,cash_flow,net change in short term borrowings::1,2015-12-31,1,1,single_source
 unilever,cash_flow,net change in short term borrowings::1,2016-12-31,1,1,single_source
-unilever,cash_flow,net change in short term borrowings::1,2017-12-31,2,1,consistent
+unilever,cash_flow,net change in short term borrowings::1,2017-12-31,2,1,identical
 unilever,cash_flow,net change in short term borrowings::1,2018-12-31,1,1,single_source
-unilever,cash_flow,net change in short term borrowings::1,2019-12-31,2,1,consistent
+unilever,cash_flow,net change in short term borrowings::1,2019-12-31,2,1,identical
 unilever,cash_flow,net change in short term borrowings::1,2020-12-31,1,1,single_source
-unilever,cash_flow,net change in short term borrowings::1,2021-12-31,2,1,consistent
+unilever,cash_flow,net change in short term borrowings::1,2021-12-31,2,1,identical
 unilever,cash_flow,net change in short term borrowings::1,2022-12-31,1,1,single_source
-unilever,cash_flow,net change in short term borrowings::1,2023-12-31,2,2,restated
+unilever,cash_flow,net change in short term borrowings::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,net change in short term borrowings::1,2024-12-31,1,1,single_source
 unilever,cash_flow,net change in short term borrowings::1,2025-12-31,1,1,single_source
 unilever,cash_flow,net finance costs::1,2015-12-31,1,1,single_source
 unilever,cash_flow,net finance costs::1,2016-12-31,1,1,single_source
-unilever,cash_flow,net finance costs::1,2017-12-31,2,2,restated
+unilever,cash_flow,net finance costs::1,2017-12-31,2,2,differs_across_editions
 unilever,cash_flow,net finance costs::1,2018-12-31,1,1,single_source
-unilever,cash_flow,net finance costs::1,2019-12-31,2,1,consistent
+unilever,cash_flow,net finance costs::1,2019-12-31,2,1,identical
 unilever,cash_flow,net finance costs::1,2020-12-31,1,1,single_source
-unilever,cash_flow,net finance costs::1,2021-12-31,2,1,consistent
+unilever,cash_flow,net finance costs::1,2021-12-31,2,1,identical
 unilever,cash_flow,net finance costs::1,2022-12-31,1,1,single_source
-unilever,cash_flow,net finance costs::1,2023-12-31,2,2,restated
+unilever,cash_flow,net finance costs::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,net finance costs::1,2024-12-31,1,1,single_source
 unilever,cash_flow,net finance costs::1,2025-12-31,1,1,single_source
 unilever,cash_flow,net financing cash flows attributable to discontinued operations::1,2023-12-31,1,1,single_source
@@ -2694,24 +2712,25 @@ unilever,cash_flow,net financing cash flows attributable to discontinued operati
 unilever,cash_flow,net financing cash flows attributable to discontinued operations::1,2025-12-31,1,1,single_source
 unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2015-12-31,1,1,single_source
 unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2016-12-31,1,1,single_source
-unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2017-12-31,2,1,consistent
+unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2017-12-31,2,1,identical
 unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2018-12-31,1,1,single_source
-unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2019-12-31,2,1,consistent
+unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2019-12-31,2,1,identical
 unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2020-12-31,1,1,single_source
-unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2021-12-31,2,1,consistent
+unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2021-12-31,2,1,identical
 unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2022-12-31,1,1,single_source
-unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2023-12-31,2,1,consistent
+unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2023-12-31,2,1,identical
 unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2024-12-31,1,1,single_source
 unilever,cash_flow,net increase decrease in cash and cash equivalents::1,2025-12-31,1,1,single_source
 unilever,cash_flow,net investing cash flows attributable to discontinued operations::1,2023-12-31,1,1,single_source
 unilever,cash_flow,net investing cash flows attributable to discontinued operations::1,2024-12-31,1,1,single_source
 unilever,cash_flow,net investing cash flows attributable to discontinued operations::1,2025-12-31,1,1,single_source
+unilever,cash_flow,net monetary loss arising from hyperinflationary economies::1,2017-12-31,1,1,single_source
 unilever,cash_flow,net monetary loss arising from hyperinflationary economies::1,2018-12-31,1,1,single_source
-unilever,cash_flow,net monetary loss arising from hyperinflationary economies::1,2019-12-31,2,1,consistent
+unilever,cash_flow,net monetary loss arising from hyperinflationary economies::1,2019-12-31,2,1,identical
 unilever,cash_flow,net monetary loss arising from hyperinflationary economies::1,2020-12-31,1,1,single_source
-unilever,cash_flow,net monetary loss arising from hyperinflationary economies::1,2021-12-31,2,1,consistent
+unilever,cash_flow,net monetary loss arising from hyperinflationary economies::1,2021-12-31,2,1,identical
 unilever,cash_flow,net monetary loss arising from hyperinflationary economies::1,2022-12-31,1,1,single_source
-unilever,cash_flow,net monetary loss arising from hyperinflationary economies::1,2023-12-31,2,2,restated
+unilever,cash_flow,net monetary loss arising from hyperinflationary economies::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,net monetary loss arising from hyperinflationary economies::1,2024-12-31,1,1,single_source
 unilever,cash_flow,net monetary loss arising from hyperinflationary economies::1,2025-12-31,1,1,single_source
 unilever,cash_flow,net operating cash flows attributable to discontinued operations::1,2023-12-31,1,1,single_source
@@ -2722,22 +2741,22 @@ unilever,cash_flow,net profit from continuing operations::1,2024-12-31,1,1,singl
 unilever,cash_flow,net profit from continuing operations::1,2025-12-31,1,1,single_source
 unilever,cash_flow,net profit::1,2015-12-31,1,1,single_source
 unilever,cash_flow,net profit::1,2016-12-31,1,1,single_source
-unilever,cash_flow,net profit::1,2017-12-31,2,2,restated
+unilever,cash_flow,net profit::1,2017-12-31,2,2,differs_across_editions
 unilever,cash_flow,net profit::1,2018-12-31,1,1,single_source
-unilever,cash_flow,net profit::1,2019-12-31,2,1,consistent
+unilever,cash_flow,net profit::1,2019-12-31,2,1,identical
 unilever,cash_flow,net profit::1,2020-12-31,1,1,single_source
-unilever,cash_flow,net profit::1,2021-12-31,2,1,consistent
+unilever,cash_flow,net profit::1,2021-12-31,2,1,identical
 unilever,cash_flow,net profit::1,2022-12-31,1,1,single_source
 unilever,cash_flow,net profit::1,2023-12-31,1,1,single_source
 unilever,cash_flow,non cash charge for share based compensation::1,2015-12-31,1,1,single_source
 unilever,cash_flow,non cash charge for share based compensation::1,2016-12-31,1,1,single_source
-unilever,cash_flow,non cash charge for share based compensation::1,2017-12-31,2,1,consistent
+unilever,cash_flow,non cash charge for share based compensation::1,2017-12-31,2,1,identical
 unilever,cash_flow,non cash charge for share based compensation::1,2018-12-31,1,1,single_source
-unilever,cash_flow,non cash charge for share based compensation::1,2019-12-31,2,1,consistent
+unilever,cash_flow,non cash charge for share based compensation::1,2019-12-31,2,1,identical
 unilever,cash_flow,non cash charge for share based compensation::1,2020-12-31,1,1,single_source
-unilever,cash_flow,non cash charge for share based compensation::1,2021-12-31,2,1,consistent
+unilever,cash_flow,non cash charge for share based compensation::1,2021-12-31,2,1,identical
 unilever,cash_flow,non cash charge for share based compensation::1,2022-12-31,1,1,single_source
-unilever,cash_flow,non cash charge for share based compensation::1,2023-12-31,2,2,restated
+unilever,cash_flow,non cash charge for share based compensation::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,non cash charge for share based compensation::1,2024-12-31,1,1,single_source
 unilever,cash_flow,non cash charge for share based compensation::1,2025-12-31,1,1,single_source
 unilever,cash_flow,operating profit from continuing operations::1,2023-12-31,1,1,single_source
@@ -2745,111 +2764,117 @@ unilever,cash_flow,operating profit from continuing operations::1,2024-12-31,1,1
 unilever,cash_flow,operating profit from continuing operations::1,2025-12-31,1,1,single_source
 unilever,cash_flow,operating profit::1,2015-12-31,1,1,single_source
 unilever,cash_flow,operating profit::1,2016-12-31,1,1,single_source
-unilever,cash_flow,operating profit::1,2017-12-31,2,2,restated
+unilever,cash_flow,operating profit::1,2017-12-31,2,2,differs_across_editions
 unilever,cash_flow,operating profit::1,2018-12-31,1,1,single_source
-unilever,cash_flow,operating profit::1,2019-12-31,2,1,consistent
+unilever,cash_flow,operating profit::1,2019-12-31,2,1,identical
 unilever,cash_flow,operating profit::1,2020-12-31,1,1,single_source
-unilever,cash_flow,operating profit::1,2021-12-31,2,1,consistent
+unilever,cash_flow,operating profit::1,2021-12-31,2,1,identical
 unilever,cash_flow,operating profit::1,2022-12-31,1,1,single_source
 unilever,cash_flow,operating profit::1,2023-12-31,1,1,single_source
 unilever,cash_flow,other adjustments::1,2015-12-31,1,1,single_source
 unilever,cash_flow,other adjustments::1,2016-12-31,1,1,single_source
-unilever,cash_flow,other adjustments::1,2017-12-31,2,1,consistent
+unilever,cash_flow,other adjustments::1,2017-12-31,2,1,identical
 unilever,cash_flow,other adjustments::1,2018-12-31,1,1,single_source
-unilever,cash_flow,other adjustments::1,2019-12-31,2,1,consistent
+unilever,cash_flow,other adjustments::1,2019-12-31,2,1,identical
 unilever,cash_flow,other adjustments::1,2020-12-31,1,1,single_source
-unilever,cash_flow,other adjustments::1,2021-12-31,2,1,consistent
+unilever,cash_flow,other adjustments::1,2021-12-31,2,1,identical
 unilever,cash_flow,other adjustments::1,2022-12-31,1,1,single_source
-unilever,cash_flow,other adjustments::1,2023-12-31,2,1,consistent
+unilever,cash_flow,other adjustments::1,2023-12-31,2,1,identical
 unilever,cash_flow,other adjustments::1,2024-12-31,1,1,single_source
 unilever,cash_flow,other adjustments::1,2025-12-31,1,1,single_source
 unilever,cash_flow,other financing activities c::1,2015-12-31,1,1,single_source
 unilever,cash_flow,other financing activities c::1,2016-12-31,1,1,single_source
-unilever,cash_flow,other financing activities c::1,2017-12-31,2,1,consistent
+unilever,cash_flow,other financing activities c::1,2017-12-31,2,1,identical
 unilever,cash_flow,other financing activities c::1,2018-12-31,1,1,single_source
-unilever,cash_flow,other financing activities c::1,2019-12-31,2,1,consistent
+unilever,cash_flow,other financing activities c::1,2019-12-31,2,1,identical
 unilever,cash_flow,other financing activities c::1,2020-12-31,1,1,single_source
-unilever,cash_flow,other financing activities c::1,2021-12-31,2,1,consistent
+unilever,cash_flow,other financing activities c::1,2021-12-31,2,1,identical
 unilever,cash_flow,other financing activities c::1,2022-12-31,1,1,single_source
-unilever,cash_flow,other financing activities c::1,2023-12-31,2,2,restated
+unilever,cash_flow,other financing activities c::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,other financing activities c::1,2024-12-31,1,1,single_source
 unilever,cash_flow,other financing activities c::1,2025-12-31,1,1,single_source
 unilever,cash_flow,other movements on treasury shares::1,2015-12-31,1,1,single_source
 unilever,cash_flow,other movements on treasury shares::1,2016-12-31,1,1,single_source
-unilever,cash_flow,other movements on treasury shares::1,2017-12-31,2,1,consistent
+unilever,cash_flow,other movements on treasury shares::1,2017-12-31,2,1,identical
 unilever,cash_flow,other movements on treasury shares::1,2018-12-31,1,1,single_source
-unilever,cash_flow,other movements on treasury shares::1,2019-12-31,2,1,consistent
+unilever,cash_flow,other movements on treasury shares::1,2019-12-31,2,1,identical
+unilever,cash_flow,other movements on treasury shares::1,2020-12-31,1,1,single_source
+unilever,cash_flow,other movements on treasury shares::1,2021-12-31,1,1,single_source
 unilever,cash_flow,pensions and similar obligations less payments::1,2015-12-31,1,1,single_source
 unilever,cash_flow,pensions and similar obligations less payments::1,2016-12-31,1,1,single_source
-unilever,cash_flow,pensions and similar obligations less payments::1,2017-12-31,2,1,consistent
+unilever,cash_flow,pensions and similar obligations less payments::1,2017-12-31,2,1,identical
 unilever,cash_flow,pensions and similar obligations less payments::1,2018-12-31,1,1,single_source
-unilever,cash_flow,pensions and similar obligations less payments::1,2019-12-31,2,1,consistent
+unilever,cash_flow,pensions and similar obligations less payments::1,2019-12-31,2,1,identical
 unilever,cash_flow,pensions and similar obligations less payments::1,2020-12-31,1,1,single_source
-unilever,cash_flow,pensions and similar obligations less payments::1,2021-12-31,2,1,consistent
+unilever,cash_flow,pensions and similar obligations less payments::1,2021-12-31,2,1,identical
 unilever,cash_flow,pensions and similar obligations less payments::1,2022-12-31,1,1,single_source
-unilever,cash_flow,pensions and similar obligations less payments::1,2023-12-31,2,2,restated
+unilever,cash_flow,pensions and similar obligations less payments::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,pensions and similar obligations less payments::1,2024-12-31,1,1,single_source
 unilever,cash_flow,pensions and similar obligations less payments::1,2025-12-31,1,1,single_source
 unilever,cash_flow,provisions less payments::1,2015-12-31,1,1,single_source
 unilever,cash_flow,provisions less payments::1,2016-12-31,1,1,single_source
-unilever,cash_flow,provisions less payments::1,2017-12-31,2,1,consistent
+unilever,cash_flow,provisions less payments::1,2017-12-31,2,1,identical
 unilever,cash_flow,provisions less payments::1,2018-12-31,1,1,single_source
-unilever,cash_flow,provisions less payments::1,2019-12-31,2,1,consistent
+unilever,cash_flow,provisions less payments::1,2019-12-31,2,1,identical
 unilever,cash_flow,provisions less payments::1,2020-12-31,1,1,single_source
-unilever,cash_flow,provisions less payments::1,2021-12-31,2,1,consistent
+unilever,cash_flow,provisions less payments::1,2021-12-31,2,1,identical
 unilever,cash_flow,provisions less payments::1,2022-12-31,1,1,single_source
-unilever,cash_flow,provisions less payments::1,2023-12-31,2,2,restated
+unilever,cash_flow,provisions less payments::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,provisions less payments::1,2024-12-31,1,1,single_source
 unilever,cash_flow,provisions less payments::1,2025-12-31,1,1,single_source
 unilever,cash_flow,purchase of intangible assets::1,2015-12-31,1,1,single_source
 unilever,cash_flow,purchase of intangible assets::1,2016-12-31,1,1,single_source
-unilever,cash_flow,purchase of intangible assets::1,2017-12-31,2,1,consistent
+unilever,cash_flow,purchase of intangible assets::1,2017-12-31,2,1,identical
 unilever,cash_flow,purchase of intangible assets::1,2018-12-31,1,1,single_source
-unilever,cash_flow,purchase of intangible assets::1,2019-12-31,2,1,consistent
+unilever,cash_flow,purchase of intangible assets::1,2019-12-31,2,1,identical
 unilever,cash_flow,purchase of intangible assets::1,2020-12-31,1,1,single_source
-unilever,cash_flow,purchase of intangible assets::1,2021-12-31,2,1,consistent
+unilever,cash_flow,purchase of intangible assets::1,2021-12-31,2,1,identical
 unilever,cash_flow,purchase of intangible assets::1,2022-12-31,1,1,single_source
-unilever,cash_flow,purchase of intangible assets::1,2023-12-31,2,2,restated
+unilever,cash_flow,purchase of intangible assets::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,purchase of intangible assets::1,2024-12-31,1,1,single_source
 unilever,cash_flow,purchase of intangible assets::1,2025-12-31,1,1,single_source
 unilever,cash_flow,purchase of property plant and equipment::1,2015-12-31,1,1,single_source
 unilever,cash_flow,purchase of property plant and equipment::1,2016-12-31,1,1,single_source
-unilever,cash_flow,purchase of property plant and equipment::1,2017-12-31,2,1,consistent
+unilever,cash_flow,purchase of property plant and equipment::1,2017-12-31,2,1,identical
 unilever,cash_flow,purchase of property plant and equipment::1,2018-12-31,1,1,single_source
-unilever,cash_flow,purchase of property plant and equipment::1,2019-12-31,2,1,consistent
+unilever,cash_flow,purchase of property plant and equipment::1,2019-12-31,2,1,identical
 unilever,cash_flow,purchase of property plant and equipment::1,2020-12-31,1,1,single_source
-unilever,cash_flow,purchase of property plant and equipment::1,2021-12-31,2,1,consistent
+unilever,cash_flow,purchase of property plant and equipment::1,2021-12-31,2,1,identical
 unilever,cash_flow,purchase of property plant and equipment::1,2022-12-31,1,1,single_source
-unilever,cash_flow,purchase of property plant and equipment::1,2023-12-31,2,2,restated
+unilever,cash_flow,purchase of property plant and equipment::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,purchase of property plant and equipment::1,2024-12-31,1,1,single_source
 unilever,cash_flow,purchase of property plant and equipment::1,2025-12-31,1,1,single_source
 unilever,cash_flow,repayment of financial liabilities::1,2015-12-31,1,1,single_source
 unilever,cash_flow,repayment of financial liabilities::1,2016-12-31,1,1,single_source
-unilever,cash_flow,repayment of financial liabilities::1,2017-12-31,2,1,consistent
+unilever,cash_flow,repayment of financial liabilities::1,2017-12-31,2,1,identical
 unilever,cash_flow,repayment of financial liabilities::1,2018-12-31,1,1,single_source
-unilever,cash_flow,repayment of financial liabilities::1,2019-12-31,2,1,consistent
+unilever,cash_flow,repayment of financial liabilities::1,2019-12-31,2,1,identical
 unilever,cash_flow,repayment of financial liabilities::1,2020-12-31,1,1,single_source
-unilever,cash_flow,repayment of financial liabilities::1,2021-12-31,2,1,consistent
+unilever,cash_flow,repayment of financial liabilities::1,2021-12-31,2,1,identical
 unilever,cash_flow,repayment of financial liabilities::1,2022-12-31,1,1,single_source
-unilever,cash_flow,repayment of financial liabilities::1,2023-12-31,2,2,restated
+unilever,cash_flow,repayment of financial liabilities::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,repayment of financial liabilities::1,2024-12-31,1,1,single_source
 unilever,cash_flow,repayment of financial liabilities::1,2025-12-31,1,1,single_source
-unilever,cash_flow,repurchase of shares::1,2017-12-31,2,1,consistent
+unilever,cash_flow,repurchase of shares::1,2015-12-31,1,1,single_source
+unilever,cash_flow,repurchase of shares::1,2016-12-31,1,1,single_source
+unilever,cash_flow,repurchase of shares::1,2017-12-31,2,1,identical
 unilever,cash_flow,repurchase of shares::1,2018-12-31,1,1,single_source
-unilever,cash_flow,repurchase of shares::1,2021-12-31,2,1,consistent
+unilever,cash_flow,repurchase of shares::1,2019-12-31,2,1,identical
+unilever,cash_flow,repurchase of shares::1,2020-12-31,1,1,single_source
+unilever,cash_flow,repurchase of shares::1,2021-12-31,2,1,identical
 unilever,cash_flow,repurchase of shares::1,2022-12-31,1,1,single_source
-unilever,cash_flow,repurchase of shares::1,2023-12-31,2,1,consistent
+unilever,cash_flow,repurchase of shares::1,2023-12-31,2,1,identical
 unilever,cash_flow,repurchase of shares::1,2024-12-31,1,1,single_source
 unilever,cash_flow,repurchase of shares::1,2025-12-31,1,1,single_source
 unilever,cash_flow,sale purchase of financial assets::1,2015-12-31,1,1,single_source
 unilever,cash_flow,sale purchase of financial assets::1,2016-12-31,1,1,single_source
-unilever,cash_flow,sale purchase of financial assets::1,2017-12-31,2,1,consistent
+unilever,cash_flow,sale purchase of financial assets::1,2017-12-31,2,1,identical
 unilever,cash_flow,sale purchase of financial assets::1,2018-12-31,1,1,single_source
-unilever,cash_flow,sale purchase of financial assets::1,2019-12-31,2,1,consistent
+unilever,cash_flow,sale purchase of financial assets::1,2019-12-31,2,1,identical
 unilever,cash_flow,sale purchase of financial assets::1,2020-12-31,1,1,single_source
-unilever,cash_flow,sale purchase of financial assets::1,2021-12-31,2,1,consistent
+unilever,cash_flow,sale purchase of financial assets::1,2021-12-31,2,1,identical
 unilever,cash_flow,sale purchase of financial assets::1,2022-12-31,1,1,single_source
-unilever,cash_flow,sale purchase of financial assets::1,2023-12-31,2,2,restated
+unilever,cash_flow,sale purchase of financial assets::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,sale purchase of financial assets::1,2024-12-31,1,1,single_source
 unilever,cash_flow,sale purchase of financial assets::1,2025-12-31,1,1,single_source
 unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments and associates::1,2015-12-31,1,1,single_source
@@ -2857,77 +2882,77 @@ unilever,cash_flow,share of net profit of joint ventures associates and other in
 unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments and associates::1,2017-12-31,1,1,single_source
 unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2017-12-31,1,1,single_source
 unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2018-12-31,1,1,single_source
-unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2019-12-31,2,1,consistent
+unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2019-12-31,2,1,identical
 unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2020-12-31,1,1,single_source
-unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2021-12-31,2,1,consistent
+unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2021-12-31,2,1,identical
 unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2022-12-31,1,1,single_source
-unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2023-12-31,2,2,restated
+unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2024-12-31,1,1,single_source
 unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2025-12-31,1,1,single_source
 unilever,cash_flow,taxation::1,2015-12-31,1,1,single_source
 unilever,cash_flow,taxation::1,2016-12-31,1,1,single_source
-unilever,cash_flow,taxation::1,2017-12-31,2,2,restated
+unilever,cash_flow,taxation::1,2017-12-31,2,2,differs_across_editions
 unilever,cash_flow,taxation::1,2018-12-31,1,1,single_source
-unilever,cash_flow,taxation::1,2019-12-31,2,1,consistent
+unilever,cash_flow,taxation::1,2019-12-31,2,1,identical
 unilever,cash_flow,taxation::1,2020-12-31,1,1,single_source
-unilever,cash_flow,taxation::1,2021-12-31,2,1,consistent
+unilever,cash_flow,taxation::1,2021-12-31,2,1,identical
 unilever,cash_flow,taxation::1,2022-12-31,1,1,single_source
-unilever,cash_flow,taxation::1,2023-12-31,2,2,restated
+unilever,cash_flow,taxation::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,taxation::1,2024-12-31,1,1,single_source
 unilever,cash_flow,taxation::1,2025-12-31,1,1,single_source
 unilever,cash_flow,total cash flow used in financing activities::1,2015-12-31,1,1,single_source
 unilever,cash_flow,total cash flow used in financing activities::1,2016-12-31,1,1,single_source
-unilever,cash_flow,total cash flow used in financing activities::1,2017-12-31,2,2,restated
+unilever,cash_flow,total cash flow used in financing activities::1,2017-12-31,2,2,differs_across_editions
 unilever,cash_flow,total cash flow used in financing activities::1,2018-12-31,1,1,single_source
-unilever,cash_flow,total cash flow used in financing activities::1,2019-12-31,2,1,consistent
+unilever,cash_flow,total cash flow used in financing activities::1,2019-12-31,2,1,identical
 unilever,cash_flow,total cash flow used in financing activities::1,2020-12-31,1,1,single_source
-unilever,cash_flow,total cash flow used in financing activities::1,2021-12-31,2,1,consistent
+unilever,cash_flow,total cash flow used in financing activities::1,2021-12-31,2,1,identical
 unilever,cash_flow,total cash flow used in financing activities::1,2022-12-31,1,1,single_source
-unilever,cash_flow,total cash flow used in financing activities::1,2023-12-31,2,1,consistent
+unilever,cash_flow,total cash flow used in financing activities::1,2023-12-31,2,1,identical
 unilever,cash_flow,total cash flow used in financing activities::1,2024-12-31,1,1,single_source
 unilever,cash_flow,total cash flow used in financing activities::1,2025-12-31,1,1,single_source
 unilever,cash_flow,total cash flows from operating activities::1,2015-12-31,1,1,single_source
 unilever,cash_flow,total cash flows from operating activities::1,2016-12-31,1,1,single_source
-unilever,cash_flow,total cash flows from operating activities::1,2017-12-31,2,2,restated
+unilever,cash_flow,total cash flows from operating activities::1,2017-12-31,2,2,differs_across_editions
 unilever,cash_flow,total cash flows from operating activities::1,2018-12-31,1,1,single_source
-unilever,cash_flow,total cash flows from operating activities::1,2019-12-31,2,1,consistent
+unilever,cash_flow,total cash flows from operating activities::1,2019-12-31,2,1,identical
 unilever,cash_flow,total cash flows from operating activities::1,2020-12-31,1,1,single_source
-unilever,cash_flow,total cash flows from operating activities::1,2021-12-31,2,1,consistent
+unilever,cash_flow,total cash flows from operating activities::1,2021-12-31,2,1,identical
 unilever,cash_flow,total cash flows from operating activities::1,2022-12-31,1,1,single_source
-unilever,cash_flow,total cash flows from operating activities::1,2023-12-31,2,1,consistent
+unilever,cash_flow,total cash flows from operating activities::1,2023-12-31,2,1,identical
 unilever,cash_flow,total cash flows from operating activities::1,2024-12-31,1,1,single_source
 unilever,cash_flow,total cash flows from operating activities::1,2025-12-31,1,1,single_source
 unilever,cash_flow,total cash outflow used in investing activities::1,2015-12-31,1,1,single_source
 unilever,cash_flow,total cash outflow used in investing activities::1,2016-12-31,1,1,single_source
-unilever,cash_flow,total cash outflow used in investing activities::1,2017-12-31,2,1,consistent
+unilever,cash_flow,total cash outflow used in investing activities::1,2017-12-31,2,1,identical
 unilever,cash_flow,total cash outflow used in investing activities::1,2018-12-31,1,1,single_source
-unilever,cash_flow,total cash outflow used in investing activities::1,2019-12-31,2,1,consistent
+unilever,cash_flow,total cash outflow used in investing activities::1,2019-12-31,2,1,identical
 unilever,cash_flow,total cash outflow used in investing activities::1,2020-12-31,1,1,single_source
-unilever,cash_flow,total cash outflow used in investing activities::1,2021-12-31,2,1,consistent
+unilever,cash_flow,total cash outflow used in investing activities::1,2021-12-31,2,1,identical
 unilever,cash_flow,total cash outflow used in investing activities::1,2022-12-31,1,1,single_source
-unilever,cash_flow,total cash outflow used in investing activities::1,2023-12-31,2,1,consistent
+unilever,cash_flow,total cash outflow used in investing activities::1,2023-12-31,2,1,identical
 unilever,cash_flow,total cash outflow used in investing activities::1,2024-12-31,1,1,single_source
 unilever,cash_flow,total cash outflow used in investing activities::1,2025-12-31,1,1,single_source
 unilever,cash_flow,trade and other receivables b::1,2015-12-31,1,1,single_source
 unilever,cash_flow,trade and other receivables b::1,2016-12-31,1,1,single_source
-unilever,cash_flow,trade and other receivables b::1,2017-12-31,2,1,consistent
+unilever,cash_flow,trade and other receivables b::1,2017-12-31,2,1,identical
 unilever,cash_flow,trade and other receivables b::1,2018-12-31,1,1,single_source
-unilever,cash_flow,trade and other receivables b::1,2019-12-31,2,1,consistent
+unilever,cash_flow,trade and other receivables b::1,2019-12-31,2,1,identical
 unilever,cash_flow,trade and other receivables b::1,2020-12-31,1,1,single_source
-unilever,cash_flow,trade and other receivables b::1,2021-12-31,2,1,consistent
+unilever,cash_flow,trade and other receivables b::1,2021-12-31,2,1,identical
 unilever,cash_flow,trade and other receivables b::1,2022-12-31,1,1,single_source
-unilever,cash_flow,trade and other receivables b::1,2023-12-31,2,2,restated
+unilever,cash_flow,trade and other receivables b::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,trade and other receivables b::1,2024-12-31,1,1,single_source
 unilever,cash_flow,trade and other receivables b::1,2025-12-31,1,1,single_source
 unilever,cash_flow,trade payables and other liabilities b::1,2015-12-31,1,1,single_source
 unilever,cash_flow,trade payables and other liabilities b::1,2016-12-31,1,1,single_source
-unilever,cash_flow,trade payables and other liabilities b::1,2017-12-31,2,1,consistent
+unilever,cash_flow,trade payables and other liabilities b::1,2017-12-31,2,1,identical
 unilever,cash_flow,trade payables and other liabilities b::1,2018-12-31,1,1,single_source
-unilever,cash_flow,trade payables and other liabilities b::1,2019-12-31,2,1,consistent
+unilever,cash_flow,trade payables and other liabilities b::1,2019-12-31,2,1,identical
 unilever,cash_flow,trade payables and other liabilities b::1,2020-12-31,1,1,single_source
-unilever,cash_flow,trade payables and other liabilities b::1,2021-12-31,2,1,consistent
+unilever,cash_flow,trade payables and other liabilities b::1,2021-12-31,2,1,identical
 unilever,cash_flow,trade payables and other liabilities b::1,2022-12-31,1,1,single_source
-unilever,cash_flow,trade payables and other liabilities b::1,2023-12-31,2,2,restated
+unilever,cash_flow,trade payables and other liabilities b::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,trade payables and other liabilities b::1,2024-12-31,1,1,single_source
 unilever,cash_flow,trade payables and other liabilities b::1,2025-12-31,1,1,single_source
 unilever,income_statement,after charging crediting non underlying items::1,2015-12-31,1,1,single_source
@@ -2944,13 +2969,13 @@ unilever,income_statement,basic earnings per share from discontinued operations:
 unilever,income_statement,basic earnings per share from discontinued operations::1,2025-12-31,1,1,single_source
 unilever,income_statement,basic earnings per share::1,2015-12-31,1,1,single_source
 unilever,income_statement,basic earnings per share::1,2016-12-31,1,1,single_source
-unilever,income_statement,basic earnings per share::1,2017-12-31,2,2,restated
+unilever,income_statement,basic earnings per share::1,2017-12-31,2,2,differs_across_editions
 unilever,income_statement,basic earnings per share::1,2018-12-31,1,1,single_source
-unilever,income_statement,basic earnings per share::1,2019-12-31,2,1,consistent
+unilever,income_statement,basic earnings per share::1,2019-12-31,2,1,identical
 unilever,income_statement,basic earnings per share::1,2020-12-31,1,1,single_source
-unilever,income_statement,basic earnings per share::1,2021-12-31,2,1,consistent
+unilever,income_statement,basic earnings per share::1,2021-12-31,2,1,identical
 unilever,income_statement,basic earnings per share::1,2022-12-31,1,1,single_source
-unilever,income_statement,basic earnings per share::1,2023-12-31,2,2,restated
+unilever,income_statement,basic earnings per share::1,2023-12-31,2,2,differs_across_editions
 unilever,income_statement,basic earnings per share::1,2024-12-31,1,1,single_source
 unilever,income_statement,basic earnings per share::1,2025-12-31,1,1,single_source
 unilever,income_statement,continuing operations::1,2023-12-31,1,1,single_source
@@ -2967,13 +2992,13 @@ unilever,income_statement,diluted earnings per share from discontinued operation
 unilever,income_statement,diluted earnings per share from discontinued operations::1,2025-12-31,1,1,single_source
 unilever,income_statement,diluted earnings per share::1,2015-12-31,1,1,single_source
 unilever,income_statement,diluted earnings per share::1,2016-12-31,1,1,single_source
-unilever,income_statement,diluted earnings per share::1,2017-12-31,2,2,restated
+unilever,income_statement,diluted earnings per share::1,2017-12-31,2,2,differs_across_editions
 unilever,income_statement,diluted earnings per share::1,2018-12-31,1,1,single_source
-unilever,income_statement,diluted earnings per share::1,2019-12-31,2,1,consistent
+unilever,income_statement,diluted earnings per share::1,2019-12-31,2,1,identical
 unilever,income_statement,diluted earnings per share::1,2020-12-31,1,1,single_source
-unilever,income_statement,diluted earnings per share::1,2021-12-31,2,1,consistent
+unilever,income_statement,diluted earnings per share::1,2021-12-31,2,1,identical
 unilever,income_statement,diluted earnings per share::1,2022-12-31,1,1,single_source
-unilever,income_statement,diluted earnings per share::1,2023-12-31,2,2,restated
+unilever,income_statement,diluted earnings per share::1,2023-12-31,2,2,differs_across_editions
 unilever,income_statement,diluted earnings per share::1,2024-12-31,1,1,single_source
 unilever,income_statement,diluted earnings per share::1,2025-12-31,1,1,single_source
 unilever,income_statement,discontinued operations::1,2023-12-31,1,1,single_source
@@ -2984,39 +3009,49 @@ unilever,income_statement,discontinued operations::2,2024-12-31,1,1,single_sourc
 unilever,income_statement,discontinued operations::2,2025-12-31,1,1,single_source
 unilever,income_statement,finance costs::1,2015-12-31,1,1,single_source
 unilever,income_statement,finance costs::1,2016-12-31,1,1,single_source
-unilever,income_statement,finance costs::1,2017-12-31,2,2,restated
+unilever,income_statement,finance costs::1,2017-12-31,2,2,differs_across_editions
 unilever,income_statement,finance costs::1,2018-12-31,1,1,single_source
-unilever,income_statement,finance costs::1,2019-12-31,2,1,consistent
+unilever,income_statement,finance costs::1,2019-12-31,2,1,identical
 unilever,income_statement,finance costs::1,2020-12-31,1,1,single_source
-unilever,income_statement,finance costs::1,2021-12-31,2,1,consistent
+unilever,income_statement,finance costs::1,2021-12-31,2,1,identical
 unilever,income_statement,finance costs::1,2022-12-31,1,1,single_source
-unilever,income_statement,finance costs::1,2023-12-31,2,2,restated
+unilever,income_statement,finance costs::1,2023-12-31,2,2,differs_across_editions
 unilever,income_statement,finance costs::1,2024-12-31,1,1,single_source
 unilever,income_statement,finance costs::1,2025-12-31,1,1,single_source
 unilever,income_statement,finance income::1,2015-12-31,1,1,single_source
 unilever,income_statement,finance income::1,2016-12-31,1,1,single_source
-unilever,income_statement,finance income::1,2017-12-31,2,1,consistent
+unilever,income_statement,finance income::1,2017-12-31,2,1,identical
 unilever,income_statement,finance income::1,2018-12-31,1,1,single_source
-unilever,income_statement,finance income::1,2019-12-31,2,1,consistent
+unilever,income_statement,finance income::1,2019-12-31,2,1,identical
 unilever,income_statement,finance income::1,2020-12-31,1,1,single_source
-unilever,income_statement,finance income::1,2021-12-31,2,1,consistent
+unilever,income_statement,finance income::1,2021-12-31,2,1,identical
 unilever,income_statement,finance income::1,2022-12-31,1,1,single_source
-unilever,income_statement,finance income::1,2023-12-31,2,2,restated
+unilever,income_statement,finance income::1,2023-12-31,2,2,differs_across_editions
 unilever,income_statement,finance income::1,2024-12-31,1,1,single_source
 unilever,income_statement,finance income::1,2025-12-31,1,1,single_source
+unilever,income_statement,gain on disposal of discontinued operations::1,2023-12-31,1,1,single_source
+unilever,income_statement,gain on disposal of discontinued operations::1,2024-12-31,1,1,single_source
 unilever,income_statement,gain on disposal of discontinued operations::1,2025-12-31,1,1,single_source
+unilever,income_statement,gain on disposal of ekaterra::1,2021-12-31,1,1,single_source
 unilever,income_statement,gain on disposal of ekaterra::1,2022-12-31,1,1,single_source
+unilever,income_statement,gain on disposal of ekaterra::1,2023-12-31,1,1,single_source
+unilever,income_statement,gain on disposal of suave::1,2021-12-31,1,1,single_source
+unilever,income_statement,gain on disposal of suave::1,2022-12-31,1,1,single_source
 unilever,income_statement,gain on disposal of suave::1,2023-12-31,1,1,single_source
-unilever,income_statement,net finance cost non underlying items::1,2017-12-31,2,1,consistent
+unilever,income_statement,net finance cost non underlying items::1,2015-12-31,1,1,single_source
+unilever,income_statement,net finance cost non underlying items::1,2016-12-31,1,1,single_source
+unilever,income_statement,net finance cost non underlying items::1,2017-12-31,2,1,identical
+unilever,income_statement,net finance cost non underlying items::1,2018-12-31,1,1,single_source
+unilever,income_statement,net finance cost non underlying items::1,2019-12-31,1,1,single_source
 unilever,income_statement,net finance costs::1,2015-12-31,1,1,single_source
 unilever,income_statement,net finance costs::1,2016-12-31,1,1,single_source
-unilever,income_statement,net finance costs::1,2017-12-31,2,2,restated
+unilever,income_statement,net finance costs::1,2017-12-31,2,2,differs_across_editions
 unilever,income_statement,net finance costs::1,2018-12-31,1,1,single_source
-unilever,income_statement,net finance costs::1,2019-12-31,2,1,consistent
+unilever,income_statement,net finance costs::1,2019-12-31,2,1,identical
 unilever,income_statement,net finance costs::1,2020-12-31,1,1,single_source
-unilever,income_statement,net finance costs::1,2021-12-31,2,1,consistent
+unilever,income_statement,net finance costs::1,2021-12-31,2,1,identical
 unilever,income_statement,net finance costs::1,2022-12-31,1,1,single_source
-unilever,income_statement,net finance costs::1,2023-12-31,2,2,restated
+unilever,income_statement,net finance costs::1,2023-12-31,2,2,differs_across_editions
 unilever,income_statement,net finance costs::1,2024-12-31,1,1,single_source
 unilever,income_statement,net finance costs::1,2025-12-31,1,1,single_source
 unilever,income_statement,net monetary gain loss arising from hyperinflationary economies::1,2021-12-31,1,1,single_source
@@ -3033,17 +3068,18 @@ unilever,income_statement,net profit from discontinued operations::1,2024-12-31,
 unilever,income_statement,net profit from discontinued operations::1,2025-12-31,1,1,single_source
 unilever,income_statement,non controlling interests::1,2015-12-31,1,1,single_source
 unilever,income_statement,non controlling interests::1,2016-12-31,1,1,single_source
-unilever,income_statement,non controlling interests::1,2017-12-31,2,1,consistent
+unilever,income_statement,non controlling interests::1,2017-12-31,2,1,identical
 unilever,income_statement,non controlling interests::1,2018-12-31,1,1,single_source
-unilever,income_statement,non controlling interests::1,2019-12-31,2,1,consistent
+unilever,income_statement,non controlling interests::1,2019-12-31,2,1,identical
 unilever,income_statement,non controlling interests::1,2020-12-31,1,1,single_source
-unilever,income_statement,non controlling interests::1,2021-12-31,2,1,consistent
+unilever,income_statement,non controlling interests::1,2021-12-31,2,1,identical
 unilever,income_statement,non controlling interests::1,2022-12-31,1,1,single_source
-unilever,income_statement,non controlling interests::1,2023-12-31,2,1,consistent
+unilever,income_statement,non controlling interests::1,2023-12-31,2,1,identical
 unilever,income_statement,non controlling interests::1,2024-12-31,1,1,single_source
 unilever,income_statement,non controlling interests::1,2025-12-31,1,1,single_source
+unilever,income_statement,non underlying item net monetary gain loss arising from hyperinflationary economies::1,2017-12-31,1,1,single_source
 unilever,income_statement,non underlying item net monetary gain loss arising from hyperinflationary economies::1,2018-12-31,1,1,single_source
-unilever,income_statement,non underlying item net monetary gain loss arising from hyperinflationary economies::1,2019-12-31,2,1,consistent
+unilever,income_statement,non underlying item net monetary gain loss arising from hyperinflationary economies::1,2019-12-31,2,1,identical
 unilever,income_statement,non underlying item net monetary gain loss arising from hyperinflationary economies::1,2020-12-31,1,1,single_source
 unilever,income_statement,non underlying item net monetary gain loss arising from hyperinflationary economies::1,2021-12-31,1,1,single_source
 unilever,income_statement,of which loss gain on disposal of group companies b::1,2023-12-31,1,1,single_source
@@ -3051,33 +3087,34 @@ unilever,income_statement,of which loss gain on disposal of group companies b::1
 unilever,income_statement,of which loss gain on disposal of group companies b::1,2025-12-31,1,1,single_source
 unilever,income_statement,operating profit::1,2015-12-31,1,1,single_source
 unilever,income_statement,operating profit::1,2016-12-31,1,1,single_source
-unilever,income_statement,operating profit::1,2017-12-31,2,2,restated
+unilever,income_statement,operating profit::1,2017-12-31,2,2,differs_across_editions
 unilever,income_statement,operating profit::1,2018-12-31,1,1,single_source
-unilever,income_statement,operating profit::1,2019-12-31,2,1,consistent
+unilever,income_statement,operating profit::1,2019-12-31,2,1,identical
 unilever,income_statement,operating profit::1,2020-12-31,1,1,single_source
-unilever,income_statement,operating profit::1,2021-12-31,2,1,consistent
+unilever,income_statement,operating profit::1,2021-12-31,2,1,identical
 unilever,income_statement,operating profit::1,2022-12-31,1,1,single_source
-unilever,income_statement,operating profit::1,2023-12-31,2,2,restated
+unilever,income_statement,operating profit::1,2023-12-31,2,2,differs_across_editions
 unilever,income_statement,operating profit::1,2024-12-31,1,1,single_source
 unilever,income_statement,operating profit::1,2025-12-31,1,1,single_source
 unilever,income_statement,other income loss from non current investments and associates::1,2016-12-31,1,1,single_source
-unilever,income_statement,other income loss from non current investments and associates::1,2017-12-31,2,2,restated
+unilever,income_statement,other income loss from non current investments and associates::1,2017-12-31,2,2,differs_across_editions
 unilever,income_statement,other income loss from non current investments and associates::1,2018-12-31,1,1,single_source
+unilever,income_statement,other income loss from non current investments and associates::1,2019-12-31,2,1,identical
 unilever,income_statement,other income loss from non current investments and associates::1,2020-12-31,1,1,single_source
-unilever,income_statement,other income loss from non current investments and associates::1,2021-12-31,2,1,consistent
+unilever,income_statement,other income loss from non current investments and associates::1,2021-12-31,2,1,identical
 unilever,income_statement,other income loss from non current investments and associates::1,2022-12-31,1,1,single_source
-unilever,income_statement,other income loss from non current investments and associates::1,2023-12-31,2,1,consistent
+unilever,income_statement,other income loss from non current investments and associates::1,2023-12-31,2,1,identical
 unilever,income_statement,other income loss from non current investments and associates::1,2024-12-31,1,1,single_source
 unilever,income_statement,other income loss from non current investments and associates::1,2025-12-31,1,1,single_source
 unilever,income_statement,pensions and similar obligations::1,2015-12-31,1,1,single_source
 unilever,income_statement,pensions and similar obligations::1,2016-12-31,1,1,single_source
-unilever,income_statement,pensions and similar obligations::1,2017-12-31,2,1,consistent
+unilever,income_statement,pensions and similar obligations::1,2017-12-31,2,1,identical
 unilever,income_statement,pensions and similar obligations::1,2018-12-31,1,1,single_source
-unilever,income_statement,pensions and similar obligations::1,2019-12-31,2,1,consistent
+unilever,income_statement,pensions and similar obligations::1,2019-12-31,2,1,identical
 unilever,income_statement,pensions and similar obligations::1,2020-12-31,1,1,single_source
-unilever,income_statement,pensions and similar obligations::1,2021-12-31,2,1,consistent
+unilever,income_statement,pensions and similar obligations::1,2021-12-31,2,1,identical
 unilever,income_statement,pensions and similar obligations::1,2022-12-31,1,1,single_source
-unilever,income_statement,pensions and similar obligations::1,2023-12-31,2,2,restated
+unilever,income_statement,pensions and similar obligations::1,2023-12-31,2,2,differs_across_editions
 unilever,income_statement,pensions and similar obligations::1,2024-12-31,1,1,single_source
 unilever,income_statement,pensions and similar obligations::1,2025-12-31,1,1,single_source
 unilever,income_statement,profit after taxation from discontinued operations::1,2023-12-31,1,1,single_source
@@ -3088,79 +3125,83 @@ unilever,income_statement,profit before taxation from continuing operations::1,2
 unilever,income_statement,profit before taxation from continuing operations::1,2025-12-31,1,1,single_source
 unilever,income_statement,profit before taxation::1,2015-12-31,1,1,single_source
 unilever,income_statement,profit before taxation::1,2016-12-31,1,1,single_source
-unilever,income_statement,profit before taxation::1,2017-12-31,2,2,restated
+unilever,income_statement,profit before taxation::1,2017-12-31,2,2,differs_across_editions
 unilever,income_statement,profit before taxation::1,2018-12-31,1,1,single_source
-unilever,income_statement,profit before taxation::1,2019-12-31,2,1,consistent
+unilever,income_statement,profit before taxation::1,2019-12-31,2,1,identical
 unilever,income_statement,profit before taxation::1,2020-12-31,1,1,single_source
-unilever,income_statement,profit before taxation::1,2021-12-31,2,1,consistent
+unilever,income_statement,profit before taxation::1,2021-12-31,2,1,identical
 unilever,income_statement,profit before taxation::1,2022-12-31,1,1,single_source
 unilever,income_statement,profit before taxation::1,2023-12-31,1,1,single_source
 unilever,income_statement,share of net profit of joint ventures and associates::1,2015-12-31,1,1,single_source
 unilever,income_statement,share of net profit of joint ventures and associates::1,2016-12-31,1,1,single_source
-unilever,income_statement,share of net profit of joint ventures and associates::1,2017-12-31,2,1,consistent
+unilever,income_statement,share of net profit of joint ventures and associates::1,2017-12-31,2,1,identical
 unilever,income_statement,share of net profit of joint ventures and associates::1,2018-12-31,1,1,single_source
-unilever,income_statement,share of net profit of joint ventures and associates::1,2019-12-31,2,1,consistent
+unilever,income_statement,share of net profit of joint ventures and associates::1,2019-12-31,2,1,identical
 unilever,income_statement,share of net profit of joint ventures and associates::1,2020-12-31,1,1,single_source
-unilever,income_statement,share of net profit of joint ventures and associates::1,2021-12-31,2,1,consistent
+unilever,income_statement,share of net profit of joint ventures and associates::1,2021-12-31,2,1,identical
 unilever,income_statement,share of net profit of joint ventures and associates::1,2022-12-31,1,1,single_source
-unilever,income_statement,share of net profit of joint ventures and associates::1,2023-12-31,2,2,restated
+unilever,income_statement,share of net profit of joint ventures and associates::1,2023-12-31,2,2,differs_across_editions
 unilever,income_statement,share of net profit of joint ventures and associates::1,2024-12-31,1,1,single_source
 unilever,income_statement,share of net profit of joint ventures and associates::1,2025-12-31,1,1,single_source
 unilever,income_statement,shareholders equity::1,2015-12-31,1,1,single_source
 unilever,income_statement,shareholders equity::1,2016-12-31,1,1,single_source
-unilever,income_statement,shareholders equity::1,2017-12-31,2,2,restated
+unilever,income_statement,shareholders equity::1,2017-12-31,2,2,differs_across_editions
 unilever,income_statement,shareholders equity::1,2018-12-31,1,1,single_source
-unilever,income_statement,shareholders equity::1,2019-12-31,2,1,consistent
+unilever,income_statement,shareholders equity::1,2019-12-31,2,1,identical
 unilever,income_statement,shareholders equity::1,2020-12-31,1,1,single_source
-unilever,income_statement,shareholders equity::1,2021-12-31,2,1,consistent
+unilever,income_statement,shareholders equity::1,2021-12-31,2,1,identical
 unilever,income_statement,shareholders equity::1,2022-12-31,1,1,single_source
-unilever,income_statement,shareholders equity::1,2023-12-31,2,1,consistent
+unilever,income_statement,shareholders equity::1,2023-12-31,2,1,identical
 unilever,income_statement,shareholders equity::1,2024-12-31,1,1,single_source
 unilever,income_statement,shareholders equity::1,2025-12-31,1,1,single_source
 unilever,income_statement,taxation::1,2015-12-31,1,1,single_source
 unilever,income_statement,taxation::1,2016-12-31,1,1,single_source
-unilever,income_statement,taxation::1,2017-12-31,2,2,restated
+unilever,income_statement,taxation::1,2017-12-31,2,2,differs_across_editions
 unilever,income_statement,taxation::1,2018-12-31,1,1,single_source
-unilever,income_statement,taxation::1,2019-12-31,2,1,consistent
+unilever,income_statement,taxation::1,2019-12-31,2,1,identical
 unilever,income_statement,taxation::1,2020-12-31,1,1,single_source
-unilever,income_statement,taxation::1,2021-12-31,2,1,consistent
+unilever,income_statement,taxation::1,2021-12-31,2,1,identical
 unilever,income_statement,taxation::1,2022-12-31,1,1,single_source
-unilever,income_statement,taxation::1,2023-12-31,2,2,restated
+unilever,income_statement,taxation::1,2023-12-31,2,2,differs_across_editions
 unilever,income_statement,taxation::1,2024-12-31,1,1,single_source
 unilever,income_statement,taxation::1,2025-12-31,1,1,single_source
 unilever,income_statement,total net profit::1,2015-12-31,1,1,single_source
 unilever,income_statement,total net profit::1,2016-12-31,1,1,single_source
-unilever,income_statement,total net profit::1,2017-12-31,2,2,restated
+unilever,income_statement,total net profit::1,2017-12-31,2,2,differs_across_editions
 unilever,income_statement,total net profit::1,2018-12-31,1,1,single_source
-unilever,income_statement,total net profit::1,2019-12-31,2,1,consistent
+unilever,income_statement,total net profit::1,2019-12-31,2,1,identical
 unilever,income_statement,total net profit::1,2020-12-31,1,1,single_source
-unilever,income_statement,total net profit::1,2021-12-31,2,1,consistent
+unilever,income_statement,total net profit::1,2021-12-31,2,1,identical
 unilever,income_statement,total net profit::1,2022-12-31,1,1,single_source
-unilever,income_statement,total net profit::1,2023-12-31,2,1,consistent
+unilever,income_statement,total net profit::1,2023-12-31,2,1,identical
 unilever,income_statement,total net profit::1,2024-12-31,1,1,single_source
 unilever,income_statement,total net profit::1,2025-12-31,1,1,single_source
 unilever,income_statement,turnover::1,2015-12-31,1,1,single_source
 unilever,income_statement,turnover::1,2016-12-31,1,1,single_source
-unilever,income_statement,turnover::1,2017-12-31,2,1,consistent
+unilever,income_statement,turnover::1,2017-12-31,2,1,identical
 unilever,income_statement,turnover::1,2018-12-31,1,1,single_source
-unilever,income_statement,turnover::1,2019-12-31,2,1,consistent
+unilever,income_statement,turnover::1,2019-12-31,2,1,identical
 unilever,income_statement,turnover::1,2020-12-31,1,1,single_source
-unilever,income_statement,turnover::1,2021-12-31,2,1,consistent
+unilever,income_statement,turnover::1,2021-12-31,2,1,identical
 unilever,income_statement,turnover::1,2022-12-31,1,1,single_source
-unilever,income_statement,turnover::1,2023-12-31,2,2,restated
+unilever,income_statement,turnover::1,2023-12-31,2,2,differs_across_editions
 unilever,income_statement,turnover::1,2024-12-31,1,1,single_source
 unilever,income_statement,turnover::1,2025-12-31,1,1,single_source
+unilever,income_statement,which includes non underlying costs of::1,2019-12-31,1,1,single_source
 unilever,income_statement,which includes non underlying costs of::1,2020-12-31,1,1,single_source
 unilever,income_statement,which includes non underlying costs of::1,2021-12-31,1,1,single_source
 unilever,income_statement,which includes non underlying item credits charges of::1,2017-12-31,1,1,single_source
 unilever,income_statement,which includes non underlying item credits charges of::1,2018-12-31,1,1,single_source
-unilever,income_statement,which includes non underlying item credits charges of::1,2019-12-31,2,1,consistent
+unilever,income_statement,which includes non underlying item credits charges of::1,2019-12-31,2,1,identical
 unilever,income_statement,which includes non underlying item credits charges of::1,2020-12-31,1,1,single_source
 unilever,income_statement,which includes non underlying item credits charges of::1,2021-12-31,1,1,single_source
+unilever,income_statement,which includes non underlying item credits charges of::2,2017-12-31,1,1,single_source
 unilever,income_statement,which includes non underlying item credits charges of::2,2018-12-31,1,1,single_source
-unilever,income_statement,which includes non underlying item credits charges of::2,2019-12-31,2,1,consistent
+unilever,income_statement,which includes non underlying item credits charges of::2,2019-12-31,2,1,identical
+unilever,income_statement,which includes non underlying item credits charges of::2,2020-12-31,1,1,single_source
+unilever,income_statement,which includes non underlying item credits charges of::2,2021-12-31,1,1,single_source
 unilever,income_statement,which includes tax impact of non underlying items of::1,2017-12-31,1,1,single_source
 unilever,income_statement,which includes tax impact of non underlying items of::1,2018-12-31,1,1,single_source
-unilever,income_statement,which includes tax impact of non underlying items of::1,2019-12-31,2,1,consistent
+unilever,income_statement,which includes tax impact of non underlying items of::1,2019-12-31,2,1,identical
 unilever,income_statement,which includes tax impact of non underlying items of::1,2020-12-31,1,1,single_source
 unilever,income_statement,which includes tax impact of non underlying items of::1,2021-12-31,1,1,single_source

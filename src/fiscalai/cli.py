@@ -42,6 +42,19 @@ def build_parser() -> argparse.ArgumentParser:
         "--headless", action="store_true",
         help="run the browser headless (note: site bot protection may block it)",
     )
+    discover_url = subparsers.add_parser(
+        "discover-url",
+        help="browser-driven report discovery from an arbitrary entry-point URL "
+             "(no company config required -- demonstrates the generic flow)",
+    )
+    discover_url.add_argument("url", help="entry-point URL to navigate from")
+    discover_url.add_argument("--follow", default=None,
+                              help="regex; if the entry page lists no PDFs, follow the first matching link one hop")
+    discover_url.add_argument("--year-min", type=int, default=None)
+    discover_url.add_argument("--year-max", type=int, default=None)
+    discover_url.add_argument("--download", action="store_true",
+                              help="fetch each discovered PDF in-session and classify it")
+    discover_url.add_argument("--headless", action="store_true")
     locate = subparsers.add_parser("locate")
     locate.add_argument("company", choices=COMPANIES)
     locate.add_argument("--year", type=int, default=2025)
@@ -87,6 +100,31 @@ def main() -> None:
         out = artifacts / "discovered_manifest.csv"
         pd.DataFrame(rows).to_csv(out, index=False)
         print(f"\nWrote {len(rows)} browser-discovered report(s) to {out}")
+        return
+
+    if args.command == "discover-url":
+        # Generic entry-point discovery: no company config required. Give it any
+        # URL, it navigates like a person and returns the reports it finds.
+        from .browser_discover import discover_from_url
+
+        artifacts.mkdir(exist_ok=True)
+        print(f"\nDiscovering reports from: {args.url}", flush=True)
+        found = discover_from_url(
+            args.url, follow_pattern=args.follow,
+            year_min=args.year_min, year_max=args.year_max,
+            download=args.download, headed=not args.headless,
+        )
+        for r in found:
+            year = r.get("report_year", "?")
+            status = r.get("status", "?")
+            extra = f" [{r.get('document_type','')}]" if args.download else ""
+            print(f"  {year}  {status:10}{extra}  {r['filename'][:60]}")
+        if found:
+            out = artifacts / "discovered_url_manifest.csv"
+            pd.DataFrame(found).to_csv(out, index=False)
+            print(f"\nDiscovered {len(found)} report(s); wrote manifest to {out}")
+        else:
+            print("\nNo report-like PDFs discovered from that entry point.")
         return
 
     manifest_path = artifacts / "filings_manifest.csv"

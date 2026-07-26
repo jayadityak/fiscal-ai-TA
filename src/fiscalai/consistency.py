@@ -2,13 +2,22 @@
 
 Every fiscal period is extracted independently from more than one annual report
 (e.g. 2021 appears in the 2021, 2023, and 2025 reports as a comparative column).
-This check compares those independent extractions of the *same* cell -- keyed by
-company, statement, row identity (canonical label + occurrence), and period -- and
-confirms they agree. Agreement across independent source documents is strong
-evidence a figure was transcribed correctly; a disagreement is either a genuine
-restatement (already tracked by the pipeline's ``restated`` flag) or a transcription
-error. Any disagreement that is *not* an accounted-for restatement is surfaced as a
-suspect cell.
+This check compares those independent extractions of the *same* cell -- keyed the
+same way ``compile.resolve_restatements`` keys a winner -- and reports whether
+they agree.
+
+Cells that agree are the meaningful signal: the same figure was read out of two
+or more separate source documents and came back identical, which is evidence the
+transcription is faithful. Cells that differ are the issuer re-presenting a
+comparative in a later report; the pipeline keeps the newest value and records
+both in ``lineage.csv``.
+
+Note on scope: this check reports agreement, it does not adjudicate it. A
+difference across editions is expected accounting behaviour (re-presentation),
+and nothing here distinguishes a re-presentation from a transcription error --
+the pipeline's ``restated`` flag is derived from the same value difference, so it
+cannot serve as independent corroboration. Use the agreement count as the
+positive signal and ``lineage.csv`` to inspect the differences.
 
 This is a deterministic audit over committed artifacts -- no LLM, no PDF re-parsing.
 """
@@ -22,30 +31,33 @@ import pandas as pd
 
 def compute_consistency(lineage_path: Path = Path("artifacts/lineage.csv")) -> dict:
     lineage = pd.read_csv(lineage_path)
-    numeric = lineage[lineage["cell_status"].astype(str) == "number"].copy()
-    numeric["restated_flag"] = numeric["restated"].astype(str).str.lower() == "true"
+    # Numbers and printed dashes both carry meaning; a cell that is a number in
+    # one edition and a dash in another is a real difference worth surfacing.
+    comparable = lineage[lineage["cell_status"].astype(str).isin(["number", "dash"])].copy()
+    comparable["cell"] = (
+        comparable["value"].astype(str) + "|" + comparable["cell_status"].astype(str)
+    )
 
-    key = ["company", "statement", "row_id", "period_end"]
+    # Key matches compile.resolve_restatements so one group has exactly one winner.
+    key = ["company", "statement", "row_id", "period_end", "currency", "value_kind"]
     records = []
-    for (company, statement, row_id, period), group in numeric.groupby(key):
+    for group_key, group in comparable.groupby(key, dropna=False):
         editions = int(group["report_year"].nunique())
-        distinct_values = int(group["value"].astype(str).nunique())
+        distinct = int(group["cell"].nunique())
         if editions < 2:
             status = "single_source"
-        elif distinct_values == 1:
-            status = "consistent"
-        elif bool(group["restated_flag"].any()):
-            status = "restated"
+        elif distinct == 1:
+            status = "identical"
         else:
-            status = "unexplained"  # differs across editions with no restatement flag
+            status = "differs_across_editions"
         records.append(
             {
-                "company": company,
-                "statement": statement,
-                "row_id": row_id,
-                "period_end": period,
+                "company": group_key[0],
+                "statement": group_key[1],
+                "row_id": group_key[2],
+                "period_end": group_key[3],
                 "editions": editions,
-                "distinct_values": distinct_values,
+                "distinct_values": distinct,
                 "status": status,
             }
         )
@@ -58,18 +70,17 @@ def write_consistency(
 ) -> dict:
     cells = compute_consistency(lineage_path)["cells"]
     frame = pd.DataFrame(cells)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     frame.to_csv(out_path, index=False)
 
     cross_checked = frame[frame["editions"] >= 2]
-    summary = {
+    return {
         "cellsTotal": int(len(frame)),
         "crossVerified": int(len(cross_checked)),
-        "consistent": int((cross_checked["status"] == "consistent").sum()),
-        "restated": int((cross_checked["status"] == "restated").sum()),
-        "unexplained": int((cross_checked["status"] == "unexplained").sum()),
+        "identical": int((cross_checked["status"] == "identical").sum()),
+        "differing": int((cross_checked["status"] == "differs_across_editions").sum()),
         "singleSource": int((frame["status"] == "single_source").sum()),
     }
-    return summary
 
 
 if __name__ == "__main__":

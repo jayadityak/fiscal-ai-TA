@@ -15,15 +15,14 @@ for Nestlé, Heineken, and Unilever. Every output covers FY2016–FY2025.
 | Extracted cells | 3,438, each traced to a source document hash and page |
 | Accounting checks | **104 / 104 passed** |
 | Source reconciliation | **45 / 45 passed** |
-| Cross-report consistency | **230 figures cross-verified, 0 unexplained differences** |
+| Cross-report agreement | **178 figures identical across independent reports** (54 differing; Unilever only — see Verification) |
 | Uncached model calls | 92 (design minimum 54, hard cap 100) |
 
 Every figure is either extracted verbatim from a filing or left explicitly absent — no
-value is estimated, interpolated, or inferred. Three independent checks back this up:
-reported subtotals must satisfy accounting identities, every extracted label and value
-must be present in the selected source-page evidence, and any figure appearing in more
-than one report edition must agree across those editions or be an accounted-for
-restatement.
+value is estimated, interpolated, or inferred. Three checks back this up: reported
+subtotals must satisfy accounting identities, every extracted label and value must be
+present in the selected source-page evidence, and figures that appear in more than one
+report edition are compared across those independent extractions.
 
 ## Run
 
@@ -84,8 +83,20 @@ back with the reports" flow.
 ```bash
 pip install -e '.[browser]'
 python -m playwright install chromium
-fiscalai discover unilever      # or: all
+fiscalai discover unilever      # or: all -- uses each company's configured entry points
+
+# Generic form: give it ANY URL, no company config required
+fiscalai discover-url "https://www.annualreports.com/Company/danone" \
+  --year-min 2019 --year-max 2023 --download
 ```
+
+`discover-url` is the flexible primitive: hand it an entry point for a company the tool
+has never seen and it navigates, collects, and (optionally) downloads and classifies the
+reports it finds. Navigation is automatic — same-site links are scored for how likely they
+lead towards annual reports (`annual report`, `archive`, `publications`, penalising press
+releases, events, and calendars), the most promising pages are visited in turn, and a page
+that yields nothing is expanded one level deeper. No per-site rules are required; the
+optional `--follow` regex only exists to override the ranking.
 
 Entry points live in `companies.py`, tried in order until every selected year is found.
 Each company combines a navigable aggregator (for the historical reports) with its own IR
@@ -139,12 +150,25 @@ error:
    must appear in the evidence from the exact source page, and the observation's document
    hash must match the filing it claims to come from. This catches invented rows and
    values attributed to the wrong document. *45 / 45 passed.*
-3. **Cross-report consistency** (`consistency.csv`) — each fiscal period is extracted
-   independently from several reports, because a 2023 filing also carries 2022 and 2021 as
-   comparatives. Those independent extractions of the same cell must agree; a disagreement
-   is either a genuine restatement (tracked in `lineage.csv`) or an extraction error.
-   *230 cells cross-verified across editions: 176 identical, 54 accounted-for restatements,
-   0 unexplained.*
+3. **Cross-report agreement** (`consistency.csv`) — where a period is extracted from more
+   than one report, those independent extractions are compared. Reading the same figure out
+   of two separate source documents and getting an identical result is evidence the
+   transcription is faithful. *232 cells appear in ≥2 editions: 178 identical, 54 differing.*
+
+   **This check only covers Unilever, and that is a property of the report selection.**
+   Extracting alternate years (2017, 2019, 2021, 2023, 2025) covers a decade with five
+   reports, but it only produces overlap when an issuer prints three comparative years.
+   Unilever does (its 2019 report carries 2017–2019), so consecutive editions share a year.
+   Nestlé and Heineken print two (their 2019 report carries 2018–2019), so alternate
+   editions tile the decade without ever overlapping and no cell is seen twice. Covering
+   them would mean extracting the intervening 2018/2020/2022/2024 editions, which exceeds
+   this run's model-call budget. The same limitation bounds the restatement handling below:
+   the mechanism is general, but only Unilever's data exercises it.
+
+   The check reports agreement rather than adjudicating it — a difference across editions
+   is expected accounting behaviour, and nothing here proves a given difference is a
+   re-presentation rather than an extraction error, so the agreement count is the positive
+   signal and the 54 differences are left in `lineage.csv` for inspection.
 
 Nil values are preserved as reported: a dash the company printed is recorded as
 `reported_dash`, while a line absent from that year's statement stays empty and is never
@@ -162,7 +186,7 @@ filled with a zero.
 - `artifacts/reconciliation.csv`: statement-level source audit covering every extracted
   row and value cell.
 - `artifacts/consistency.csv`: per-cell agreement across report editions, marking each as
-  consistent, restated, unexplained, or single-source.
+  identical, differing, or single-source.
 - `artifacts/discovered_manifest.csv`: reports found by browser discovery, with the entry
   point and `discovery_source` for each.
 - `artifacts/{company}_{statement}.csv`: one 2016–2025 table per company and statement.
@@ -189,9 +213,13 @@ selection, pivoting, and every validation are deterministic.
 ## Limitations
 
 - A low-confidence or image-only statement is rejected rather than guessed. Unilever's
-  official 2017 PDF is the source artifact; because its primary statements are
-  image-only, extraction uses the matching text-layer copy solely as a deterministic
-  text companion while retaining the official PDF hash and provenance.
+  2017 primary statements are image-only, so extraction reads a matching text-layer copy
+  of the same report as a deterministic text companion. Note that observations from that
+  report therefore record the **companion's** SHA-256 as `document_id`, not the official
+  PDF's — the reconciliation check hashes the same companion, so provenance is internally
+  consistent and auditable, but it points at the text-layer copy. The official PDF remains
+  in `filings_manifest.csv` with its own hash. A production design should carry both
+  identifiers on every observation.
 - Some public IR CDNs block scripted downloads, so `fiscalai scrape` can record explicit
   failures for links a browser retrieves without trouble. `fiscalai discover` is the answer
   to that: it drives a real browser and succeeds where the plain-HTTP path is refused.

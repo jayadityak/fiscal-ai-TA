@@ -37,6 +37,8 @@ test("renders the financial statement review experience", async () => {
   assert.match(html, /Built for auditability/);
   assert.match(html, /A narrow LLM boundary/);
   assert.match(html, /Nestlé/);
-  assert.match(html, /99/);
+  assert.match(html, /deterministic checks passed/);
+  assert.match(html, /identical across independent reports/);
+  assert.match(html, /differing across editions/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });
