@@ -1,0 +1,9 @@
+bug_id,severity,company,statement,source_report,source_page,line_item,affected_period,old_published_value,correct_published_value,root_cause,status
+VALUE-001,high,heineken,cash_flow,2019,66,Total change in working capital,2018-12-31,blank,713,"The extractor returned only one of two printed period cells.",fixed
+VALUE-002,high,heineken,cash_flow,2019,66,Total change in working capital,2019-12-31,713,8,"The 2018 value was shifted into the 2019 column.",fixed
+VALUE-003,high,heineken,cash_flow,2021,73,Other non-cash items,2020-12-31,blank,231,"The extractor emitted an empty comparative cell although 231 is printed.",fixed
+VALUE-004,high,heineken,cash_flow,2021,73,Other non-cash items,2021-12-31,231,30,"The 2020 value was shifted into the 2021 column.",fixed
+VALUE-005,high,unilever,income_statement,2017,89,Other income/(loss) from non-current investments and associates,2016-12-31,91,104,"The three-column row was shifted left; 91 belongs to 2015.",fixed
+LINEAGE-001,medium,unilever,cash_flow,2017,92,Share of net profit of joint ventures/associates and other (income)/loss from non-current investments,2016-12-31,-231,-231,"The older label retained 'and associates' and was not unified with the later canonical row, so the published cell had no matching displayed row_id.",fixed
+VALIDATION-001,high,all,all,all,all,all,all,not_applicable,not_applicable,"The old reconciliation only checked document hashes and non-empty fields; it did not test source row or period-column placement.",fixed
+REPRO-001,medium,all,all,all,all,all,all,not_applicable,not_applicable,"Cached semantic results could not be reused without OPENAI_API_KEY because the key check ran before the cache lookup.",fixed

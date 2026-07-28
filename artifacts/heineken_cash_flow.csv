@@ -5,12 +5,12 @@ Net interest expenses,1,EUR,currency,1000000,359,396,421,454,447,413,384,550,570
 Other income,1,EUR,currency,1000000,,,-75,-95,-56,-1326,-147,-352,-37,-74
 Share of profit/(loss) of associates and joint ventures and dividend income on fair value through OCI investments,1,EUR,currency,1000000,-161,-84,-228,-173,21,-256,-230,-226,687,-264
 Income tax expenses,1,EUR,currency,1000000,673,755,741,910,245,799,1131,121,846,857
-Other non-cash items,1,EUR,currency,1000000,332,314,201,240,,231,284,537,226,131
+Other non-cash items,1,EUR,currency,1000000,332,314,201,240,231,30,284,537,226,131
 Cash flow from operations before changes in working capital and provisions,1,EUR,currency,1000000,4713,4980,4858,5669,3674,5154,6347,6127,6058,5909
 Change in inventories,1,EUR,currency,1000000,-20,-185,-129,-257,-18,-308,-793,-4,-39,2
 Change in trade and other receivables,1,EUR,currency,1000000,-228,-241,-66,-245,1124,-697,-668,-42,347,54
 Change in trade and other payables and returnable packaging deposits,1,EUR,currency,1000000,,,908,510,-759,1268,981,-100,543,271
-Total change in working capital,1,EUR,currency,1000000,80,69,,713,347,263,-480,-146,851,327
+Total change in working capital,1,EUR,currency,1000000,80,69,713,8,347,263,-480,-146,851,327
 Change in provisions and post-retirement obligations,1,EUR,currency,1000000,-73,-125,-31,-121,211,-290,-207,-32,-6,98
 Cash flow from operations,1,EUR,currency,1000000,4720,4924,5540,5556,4232,5127,5660,5949,6903,6334
 Interest paid,1,EUR,currency,1000000,-441,-463,-555,-528,-481,-456,-439,-624,-668,-621

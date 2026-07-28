@@ -322,19 +322,20 @@ export default function Home() {
           </article>
 
           <article className="restatement-card">
-            <span className="card-label">Restatement policy</span>
+            <span className="card-label">Edition-selection policy</span>
             <h3>The newest report wins.</h3>
             <p>
               When multiple reports contain the same fiscal period, selection
               is deterministic: sort by report year descending and retain the
-              most recently reported observation. No model chooses the winner.
+              most recently reported observation. A changed value is flagged
+              for review; the difference alone is not proof of a restatement.
             </p>
-            <div className="restatement-flow" aria-label="Restatement example">
-              <span>FY2022 original</span>
+            <div className="restatement-flow" aria-label="Report edition selection rule">
+              <span>Earlier edition</span>
               <span aria-hidden="true">→</span>
-              <span>FY2022 in 2023</span>
+              <span>Later edition</span>
               <span aria-hidden="true">→</span>
-              <strong>FY2022 in 2025</strong>
+              <strong>Newest observation retained</strong>
             </div>
           </article>
         </div>

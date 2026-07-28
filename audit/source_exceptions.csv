@@ -1,0 +1,1 @@
+company,report_year,statement,document_id,source_page,row_order,row_kind,reported_label,period_end,raw_value,label_block_matches,value_span_matches,spatial_row_matches,correct_column_matches,wrong_column_matches,same_block,page_label_found,subtotal_reconciled,source_status

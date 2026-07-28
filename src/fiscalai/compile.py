@@ -62,6 +62,10 @@ CURATED_ALIASES: dict[tuple[str, str], dict[str, str]] = {
             "Total cash flow used in financing activities",
         "other financing activities": "Other financing activities(c)",
         "other financing activities a": "Other financing activities(c)",
+        "share of net profit of joint ventures associates and other income loss "
+        "from non current investments and associates":
+            "Share of net profit of joint ventures/associates and other "
+            "(income)/loss from non-current investments",
     },
 }
 
@@ -487,6 +491,11 @@ def canonicalize_observations(observations: pd.DataFrame) -> pd.DataFrame:
                 + "::"
                 + frame.loc[row_index, "reported_occurrence"].astype(str)
             )
+    return apply_curated_aliases(frame)
+
+
+def apply_curated_aliases(observations: pd.DataFrame) -> pd.DataFrame:
+    frame = observations.copy()
     for (company, statement), aliases in CURATED_ALIASES.items():
         mask = (frame["company"] == company) & (frame["statement"] == statement)
         mapped = frame.loc[mask, "reported_label"].map(
@@ -549,9 +558,44 @@ def resolve_restatements(observations: pd.DataFrame) -> tuple[pd.DataFrame, pd.D
 def write_outputs(
     observations: pd.DataFrame,
     artifacts_dir: Path = Path("artifacts"),
+    use_existing_canonicalization: bool = False,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     artifacts_dir.mkdir(parents=True, exist_ok=True)
-    prepared = canonicalize_observations(prepare_observations(observations))
+    if use_existing_canonicalization:
+        canonical_columns = ["canonical_id", "canonical_label", "row_id"]
+        missing = [
+            column for column in canonical_columns if column not in observations
+        ]
+        if missing:
+            raise ValueError(
+                "Existing canonicalization requested but columns are missing: "
+                f"{missing}"
+            )
+        lookup_key = [
+            "company",
+            "document_id",
+            "report_year",
+            "statement",
+            "row_order",
+            "reported_label",
+        ]
+        lookup = observations[lookup_key + canonical_columns].drop_duplicates(
+            lookup_key
+        )
+        prepared = prepare_observations(observations).drop(
+            columns=canonical_columns
+        )
+        prepared = prepared.merge(
+            lookup,
+            on=lookup_key,
+            how="left",
+            validate="many_to_one",
+        )
+        if prepared[canonical_columns].isna().any().any():
+            raise RuntimeError("Existing canonicalization could not be restored")
+        prepared = apply_curated_aliases(prepared)
+    else:
+        prepared = canonicalize_observations(prepare_observations(observations))
     winners, lineage = resolve_restatements(prepared)
     lineage.to_csv(artifacts_dir / "lineage.csv", index=False)
 

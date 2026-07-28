@@ -13,6 +13,7 @@ from fiscalai.compile import (
 from fiscalai.extract import (
     MIN_STATEMENT_SCORE,
     TEXT_COMPANIONS,
+    apply_source_row_repairs,
     _document_id,
     _page_score,
     _text_source,
@@ -20,10 +21,16 @@ from fiscalai.extract import (
 from fiscalai.llm import (
     CanonicalGroup,
     Canonicalization,
+    _cache_key,
+    _parse_cached,
     canonicalize_statement_labels,
 )
 from fiscalai.scrape import classify_pdf, infer_report_year
-from fiscalai.validate import validate_balance_sheet, write_validation
+from fiscalai.validate import (
+    validate_balance_sheet,
+    write_reconciliation,
+    write_validation,
+)
 
 
 def test_parse_number_preserves_dash_and_parentheses() -> None:
@@ -44,6 +51,35 @@ def test_classification_is_direct_and_explainable() -> None:
     assert classify_pdf("Creating Shared Value Sustainability Report")[0] == "sustainability"
     assert infer_report_year("Annual report 2025, published February 2026") == 2025
     assert infer_report_year("heineken-nv-annual-report-2021-25-02-2022.pdf") == 2021
+
+
+def test_cached_semantic_result_does_not_require_api_key(
+    tmp_path,
+    monkeypatch,
+) -> None:
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    task = "test"
+    instructions = "instructions"
+    payload = "payload"
+    model = "gpt-5-mini"
+    result = Canonicalization(
+        groups=[CanonicalGroup(canonical_label="Sales", members=["Sales"])]
+    )
+    key = _cache_key(
+        task,
+        model,
+        instructions,
+        payload,
+        Canonicalization,
+    )
+    (tmp_path / f"{key}.json").write_text(result.model_dump_json())
+    assert _parse_cached(
+        task,
+        instructions,
+        payload,
+        Canonicalization,
+        tmp_path,
+    ) == result
 
 
 def test_all_companies_share_the_requested_window() -> None:
@@ -161,6 +197,104 @@ def test_weighted_average_share_count_is_not_scaled_as_currency() -> None:
     assert prepared.iloc[0]["value_kind"] == "shares"
     assert prepared.iloc[0]["effective_multiplier"] == 1
     assert prepared.iloc[0]["value"] == "556774934"
+
+
+def test_verified_source_repairs_reread_values_from_pdf(tmp_path) -> None:
+    import fitz
+
+    source = tmp_path / "report.pdf"
+    document = fitz.open()
+    page = document.new_page()
+    page.insert_text((350, 100), "2019")
+    page.insert_text((400, 100), "2018*")
+    page.insert_text((40, 200), "Total change in working capital")
+    page.insert_text((350, 200), "8")
+    page.insert_text((400, 200), "713")
+    document.save(source)
+    document.close()
+
+    rows = pd.DataFrame(
+        [
+            {
+                "company": "heineken",
+                "document_id": _document_id(source),
+                "report_year": 2019,
+                "statement": "cash_flow",
+                "page": "1",
+                "row_order": 28,
+                "row_kind": "line_item",
+                "reported_label": "Total change in working capital",
+                "footnote_marker": "",
+                "period_end": "2019-12-31",
+                "raw_value": "713",
+                "currency": "EUR",
+                "unit_multiplier": 1_000_000,
+                "extraction_method": "llm_structured_native_pdf_text",
+            }
+        ]
+    )
+    corrected = apply_source_row_repairs(rows, source).sort_values("period_end")
+    assert corrected[["period_end", "raw_value"]].values.tolist() == [
+        ["2018-12-31", "713"],
+        ["2019-12-31", "8"],
+    ]
+    assert corrected["extraction_method"].str.endswith(
+        "_verified_pdf_spatial_repair"
+    ).all()
+
+
+def test_reconciliation_rejects_incomplete_line_item_periods(tmp_path) -> None:
+    source = tmp_path / "report.pdf"
+    source.write_bytes(b"source")
+    document_id = _document_id(source)
+    observations = pd.DataFrame(
+        [
+            {
+                "company": "heineken",
+                "document_id": document_id,
+                "report_year": 2019,
+                "statement": "cash_flow",
+                "page": "66",
+                "row_order": 1,
+                "row_kind": "line_item",
+                "reported_label": "Complete row",
+                "period_end": period,
+                "raw_value": value,
+            }
+            for period, value in (
+                ("2019-12-31", "10"),
+                ("2018-12-31", "9"),
+            )
+        ]
+        + [
+            {
+                "company": "heineken",
+                "document_id": document_id,
+                "report_year": 2019,
+                "statement": "cash_flow",
+                "page": "66",
+                "row_order": 2,
+                "row_kind": "line_item",
+                "reported_label": "Incomplete row",
+                "period_end": "2019-12-31",
+                "raw_value": "7",
+            }
+        ]
+    )
+    manifest = pd.DataFrame(
+        [
+            {
+                "company": "heineken",
+                "report_year": 2019,
+                "status": "downloaded",
+                "document_type": "annual_report",
+                "local_path": str(source),
+            }
+        ]
+    )
+    result = write_reconciliation(observations, manifest, tmp_path)
+    assert result.iloc[0]["incomplete_line_item_rows"] == 1
+    assert result.iloc[0]["status"] == "failed"
 
 
 def test_labels_that_coexist_cannot_be_canonicalized_together(

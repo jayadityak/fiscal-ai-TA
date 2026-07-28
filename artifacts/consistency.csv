@@ -663,6 +663,7 @@ heineken,cash_flow,other non cash items::1,2016-12-31,1,1,single_source
 heineken,cash_flow,other non cash items::1,2017-12-31,1,1,single_source
 heineken,cash_flow,other non cash items::1,2018-12-31,1,1,single_source
 heineken,cash_flow,other non cash items::1,2019-12-31,1,1,single_source
+heineken,cash_flow,other non cash items::1,2020-12-31,1,1,single_source
 heineken,cash_flow,other non cash items::1,2021-12-31,1,1,single_source
 heineken,cash_flow,other non cash items::1,2022-12-31,1,1,single_source
 heineken,cash_flow,other non cash items::1,2023-12-31,1,1,single_source
@@ -772,6 +773,7 @@ heineken,cash_flow,share of profit loss of associates and joint ventures and div
 heineken,cash_flow,share of profit loss of associates and joint ventures and dividend income on fair value through oci investments::1,2025-12-31,1,1,single_source
 heineken,cash_flow,total change in working capital::1,2016-12-31,1,1,single_source
 heineken,cash_flow,total change in working capital::1,2017-12-31,1,1,single_source
+heineken,cash_flow,total change in working capital::1,2018-12-31,1,1,single_source
 heineken,cash_flow,total change in working capital::1,2019-12-31,1,1,single_source
 heineken,cash_flow,total change in working capital::1,2020-12-31,1,1,single_source
 heineken,cash_flow,total change in working capital::1,2021-12-31,1,1,single_source
@@ -2877,10 +2879,9 @@ unilever,cash_flow,sale purchase of financial assets::1,2022-12-31,1,1,single_so
 unilever,cash_flow,sale purchase of financial assets::1,2023-12-31,2,2,differs_across_editions
 unilever,cash_flow,sale purchase of financial assets::1,2024-12-31,1,1,single_source
 unilever,cash_flow,sale purchase of financial assets::1,2025-12-31,1,1,single_source
-unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments and associates::1,2015-12-31,1,1,single_source
-unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments and associates::1,2016-12-31,1,1,single_source
-unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments and associates::1,2017-12-31,1,1,single_source
-unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2017-12-31,1,1,single_source
+unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2015-12-31,1,1,single_source
+unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2016-12-31,1,1,single_source
+unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2017-12-31,2,1,identical
 unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2018-12-31,1,1,single_source
 unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2019-12-31,2,1,identical
 unilever,cash_flow,share of net profit of joint ventures associates and other income loss from non current investments::1,2020-12-31,1,1,single_source
@@ -3096,8 +3097,9 @@ unilever,income_statement,operating profit::1,2022-12-31,1,1,single_source
 unilever,income_statement,operating profit::1,2023-12-31,2,2,differs_across_editions
 unilever,income_statement,operating profit::1,2024-12-31,1,1,single_source
 unilever,income_statement,operating profit::1,2025-12-31,1,1,single_source
+unilever,income_statement,other income loss from non current investments and associates::1,2015-12-31,1,1,single_source
 unilever,income_statement,other income loss from non current investments and associates::1,2016-12-31,1,1,single_source
-unilever,income_statement,other income loss from non current investments and associates::1,2017-12-31,2,2,differs_across_editions
+unilever,income_statement,other income loss from non current investments and associates::1,2017-12-31,2,1,identical
 unilever,income_statement,other income loss from non current investments and associates::1,2018-12-31,1,1,single_source
 unilever,income_statement,other income loss from non current investments and associates::1,2019-12-31,2,1,identical
 unilever,income_statement,other income loss from non current investments and associates::1,2020-12-31,1,1,single_source

@@ -357,6 +357,17 @@ def write_reconciliation(
         sort=True,
     ):
         populated = rows[rows["raw_value"].astype(str).str.strip() != ""]
+        line_items = rows[rows["row_kind"].astype(str) == "line_item"]
+        expected_periods = int(rows["period_end"].astype(str).nunique())
+        line_item_period_counts = line_items.groupby(
+            ["row_order", "reported_label"], dropna=False
+        )["period_end"].nunique()
+        incomplete_line_item_rows = int(
+            (line_item_period_counts < expected_periods).sum()
+        )
+        blank_line_item_cells = int(
+            (line_items["raw_value"].astype(str).str.strip() == "").sum()
+        )
         source_hash = source_hashes.get((str(company), int(report_year)), "")
         document_matches = (
             bool(source_hash)
@@ -382,9 +393,17 @@ def write_reconciliation(
                 "extracted_cells": len(populated),
                 "missing_labels": missing_labels,
                 "missing_values": missing_values,
+                "incomplete_line_item_rows": incomplete_line_item_rows,
+                "blank_line_item_cells": blank_line_item_cells,
                 "status": (
                     "passed"
-                    if document_matches and not missing_labels and not missing_values
+                    if (
+                        document_matches
+                        and not missing_labels
+                        and not missing_values
+                        and not incomplete_line_item_rows
+                        and not blank_line_item_cells
+                    )
                     else "failed"
                 ),
             }

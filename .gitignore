@@ -10,5 +10,6 @@ tmp/
 *.inspect.ndjson
 ~$*.xlsx
 INTERVIEW_PREP.md
+CODE_WALKTHROUGH_PLAIN_ENGLISH.md
 *.BACKUP.*
 web/.claude/

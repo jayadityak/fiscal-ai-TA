@@ -1,16 +1,17 @@
 """Cross-report consistency check.
 
-Every fiscal period is extracted independently from more than one annual report
-(e.g. 2021 appears in the 2021, 2023, and 2025 reports as a comparative column).
-This check compares those independent extractions of the *same* cell -- keyed the
-same way ``compile.resolve_restatements`` keys a winner -- and reports whether
-they agree.
+Where the selected reports overlap, this check compares independent extractions
+of the *same* cell -- keyed the same way ``compile.resolve_restatements`` keys a
+winner -- and reports whether they agree. In this delivered source set, only
+Unilever prints enough comparative periods for the alternate report years to
+overlap.
 
 Cells that agree are the meaningful signal: the same figure was read out of two
 or more separate source documents and came back identical, which is evidence the
-transcription is faithful. Cells that differ are the issuer re-presenting a
-comparative in a later report; the pipeline keeps the newest value and records
-both in ``lineage.csv``.
+transcription is faithful. Cells that differ are flagged for review; they may
+reflect an issuer re-presentation or an extraction problem. The pipeline
+mechanically keeps the newest value and records both observations in
+``lineage.csv``.
 
 Note on scope: this check reports agreement, it does not adjudicate it. A
 difference across editions is expected accounting behaviour (re-presentation),

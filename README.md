@@ -12,14 +12,17 @@ for Nestlé, Heineken, and Unilever. Every output covers FY2016–FY2025.
 | Companies | 3 (Nestlé, Heineken, Unilever) |
 | Annual reports | 15 — five per company (2017, 2019, 2021, 2023, 2025) |
 | Output tables | 9 — three statements × three companies, FY2016–FY2025 |
-| Extracted cells | 3,438, each traced to a source document hash and page |
+| Extracted cells | 3,441 populated or printed-dash cells, each traced to a source document hash and page |
 | Accounting checks | **104 / 104 passed** |
 | Source reconciliation | **45 / 45 passed** |
-| Cross-report agreement | **178 figures identical across independent reports** (54 differing; Unilever only — see Verification) |
+| Cross-report agreement | **180 figures identical across independent reports** (53 differing; Unilever only — see Verification) |
 | Uncached model calls | 92 (design minimum 54, hard cap 100) |
 
-Every figure is either extracted verbatim from a filing or left explicitly absent — no
-value is estimated, interpolated, or inferred. Three checks back this up: reported
+Every published figure comes from an exact printed PDF token or is left explicitly
+absent — no value is estimated, interpolated, or inferred. For three known rows whose
+PDF text stream scrambles column order, deterministic spatial repair rereads the token
+from the cited page and assigns it to the printed year header; no financial value is
+stored in the repair code. Three checks back this up: reported
 subtotals must satisfy accounting identities, every extracted label and value must be
 present in the selected source-page evidence, and figures that appear in more than one
 report edition are compared across those independent extractions.
@@ -41,7 +44,8 @@ pytest
 
 `scrape` downloads and classifies filings. `locate` is a deterministic page-locator
 diagnostic. `run` extracts all five selected reports per company, canonicalizes labels,
-resolves restatements, writes the final tables, and validates them. Extraction and
+selects the newest report edition for overlapping cells, writes the final tables, and
+validates them. Extraction and
 canonicalization use bounded parallelism. The selected report years are 2017, 2019,
 2021, 2023, and 2025; their comparative columns cover ten fiscal years without
 downloading one report per year.
@@ -129,7 +133,7 @@ The pipeline is deliberately direct:
    identity, profit attribution subtotal, and cash roll-forward, plus row-completeness for
    statements whose layout is known to be hard to read.
 6. `consistency.py` compares independent extractions of the same cell across report
-   editions and flags any disagreement that is not an accounted-for restatement.
+   editions and flags every disagreement for inspection.
 
 The minimum uncached model budget is 54 calls: 45 statement extractions plus 9 label
 canonicalizations. The delivered run used 92 calls after focused retries on ambiguous
@@ -153,7 +157,7 @@ error:
 3. **Cross-report agreement** (`consistency.csv`) — where a period is extracted from more
    than one report, those independent extractions are compared. Reading the same figure out
    of two separate source documents and getting an identical result is evidence the
-   transcription is faithful. *232 cells appear in ≥2 editions: 178 identical, 54 differing.*
+   transcription is faithful. *233 cells appear in ≥2 editions: 180 identical, 53 differing.*
 
    **This check only covers Unilever, and that is a property of the report selection.**
    Extracting alternate years (2017, 2019, 2021, 2023, 2025) covers a decade with five
@@ -162,13 +166,13 @@ error:
    Nestlé and Heineken print two (their 2019 report carries 2018–2019), so alternate
    editions tile the decade without ever overlapping and no cell is seen twice. Covering
    them would mean extracting the intervening 2018/2020/2022/2024 editions, which exceeds
-   this run's model-call budget. The same limitation bounds the restatement handling below:
+   this run's model-call budget. The same limitation bounds the report-edition comparison:
    the mechanism is general, but only Unilever's data exercises it.
 
    The check reports agreement rather than adjudicating it — a difference across editions
    is expected accounting behaviour, and nothing here proves a given difference is a
    re-presentation rather than an extraction error, so the agreement count is the positive
-   signal and the 54 differences are left in `lineage.csv` for inspection.
+   signal and the 53 differences are left in `lineage.csv` for inspection.
 
 Nil values are preserved as reported: a dash the company printed is recorded as
 `reported_dash`, while a line absent from that year's statement stays empty and is never
@@ -207,8 +211,8 @@ The model handles only semantic work: mapping messy statement text into a strict
 source labels and raw printed cells must be present in the extracted page evidence or
 the run fails.
 
-Downloading, raw PDF text extraction, numeric parsing, unit scaling, restatement
-selection, pivoting, and every validation are deterministic.
+Downloading, raw PDF text extraction, numeric parsing, unit scaling, report-edition
+selection, spatial repair, pivoting, and every validation are deterministic.
 
 ## Limitations
 
@@ -223,11 +227,11 @@ selection, pivoting, and every validation are deterministic.
 - Some public IR CDNs block scripted downloads, so `fiscalai scrape` can record explicit
   failures for links a browser retrieves without trouble. `fiscalai discover` is the answer
   to that: it drives a real browser and succeeds where the plain-HTTP path is refused.
-- Source reconciliation is presence-based: it proves a label and its printed value appear
-  in the selected page evidence, not that the value sits at that label's row and period
-  column. The accounting identities and cross-report agreement checks cover that gap for
-  any figure feeding a subtotal or appearing in more than one edition; true positional
-  verification would need full table reconstruction and is not implemented.
+- The built-in source reconciliation is presence-based. The delivered
+  `scripts/audit_values.py` audit additionally reconstructs rows and year columns from
+  PDF coordinates for all 3,461 observation records (including 20 nonnumeric headings),
+  reconciles section subtotals where a literal row match is not meaningful, and emits
+  any unresolved cell to `audit/source_exceptions.csv`.
 - Currency changes fail explicitly. No foreign-exchange conversion is attempted.
 - Accounting checks use the companies' reported subtotal labels and deterministic
   component sums where a single printed aggregate is absent. The delivered run has no

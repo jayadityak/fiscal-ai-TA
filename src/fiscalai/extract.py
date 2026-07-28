@@ -46,6 +46,34 @@ REQUIRED_ROW_ANCHORS = {
     ),
 }
 
+# Targeted spatial repairs for source rows where the PDF text stream interleaves
+# row labels and value columns.  This table deliberately contains no financial
+# values: the exact printed tokens are reread from the cited PDF page and assigned
+# to the printed year headers by x-coordinate.
+SOURCE_ROW_REPAIRS: dict[
+    tuple[str, int, str, str],
+    tuple[str, ...],
+] = {
+    (
+        "heineken",
+        2019,
+        "cash_flow",
+        "total change in working capital",
+    ): ("2019", "2018"),
+    (
+        "heineken",
+        2021,
+        "cash_flow",
+        "other non cash items",
+    ): ("2021", "2020"),
+    (
+        "unilever",
+        2017,
+        "income_statement",
+        "other income loss from non current investments and associates",
+    ): ("2017", "2016", "2015"),
+}
+
 
 def _document_id(pdf_path: Path) -> str:
     return (
@@ -217,6 +245,178 @@ def _period_end(value: str) -> str:
     return f"{value}-12-31" if re.fullmatch(r"20\d{2}", value) else value
 
 
+def _correction_key(value: str) -> str:
+    normalized = unicodedata.normalize("NFKC", value).casefold()
+    return re.sub(r"[\s\W_]+", " ", normalized).strip()
+
+
+def _page_numbers(value: object) -> tuple[int, ...]:
+    return tuple(int(number) for number in re.findall(r"\d+", str(value)))
+
+
+def _printed_year(value: str) -> str | None:
+    match = re.match(r"(20\d{2})", value)
+    return match.group(1) if match else None
+
+
+def _looks_like_printed_value(value: str) -> bool:
+    normalized = unicodedata.normalize("NFKC", value).strip()
+    return bool(
+        re.fullmatch(
+            r"(?:[-–—]|\(?[+\-−]?\d[\d,.'’]*%?\)?)",
+            normalized,
+        )
+    )
+
+
+def _pdf_row_cells(
+    pdf_path: Path,
+    pages: tuple[int, ...],
+    label_key: str,
+    expected_years: tuple[str, ...],
+) -> tuple[tuple[str, str], ...]:
+    """Read one printed row and align its value tokens to printed year headers."""
+    text_path, _, _ = _text_source(pdf_path)
+    with fitz.open(text_path) as document:
+        for page_number in pages:
+            page = document[page_number - 1]
+            words = page.get_text("words", sort=False)
+            blocks = page.get_text("blocks", sort=False)
+            for block_number, _ in enumerate(blocks):
+                block_words = [word for word in words if int(word[5]) == block_number]
+                label_lines: dict[int, list[tuple]] = {}
+                for word in block_words:
+                    label_lines.setdefault(int(word[6]), []).append(word)
+                matching_lines = [
+                    line
+                    for line in label_lines.values()
+                    if label_key
+                    in _correction_key(
+                        " ".join(str(word[4]) for word in sorted(line, key=lambda item: item[0]))
+                    )
+                ]
+                if not matching_lines:
+                    continue
+
+                label_line = matching_lines[0]
+                label_right = max(float(word[2]) for word in label_line)
+                label_y = sum((float(word[1]) + float(word[3])) / 2 for word in label_line)
+                label_y /= len(label_line)
+
+                headers = []
+                for word in words:
+                    year = _printed_year(str(word[4]))
+                    if year in expected_years and float(word[3]) < label_y:
+                        headers.append((year, (float(word[0]) + float(word[2])) / 2, float(word[1])))
+                if not headers:
+                    continue
+                nearest_header_y = max(header[2] for header in headers)
+                headers = [
+                    header for header in headers if abs(header[2] - nearest_header_y) <= 2
+                ]
+
+                header_groups: list[list[tuple[str, float, float]]] = []
+                for index, header in enumerate(sorted(headers, key=lambda item: item[1])):
+                    if header[0] != expected_years[0]:
+                        continue
+                    candidate = sorted(headers, key=lambda item: item[1])[index:index + len(expected_years)]
+                    if tuple(item[0] for item in candidate) == expected_years:
+                        header_groups.append(candidate)
+                eligible_groups = [
+                    group for group in header_groups if group[0][1] > label_right
+                ]
+                if not eligible_groups:
+                    continue
+                year_headers = min(
+                    eligible_groups,
+                    key=lambda group: group[0][1] - label_right,
+                )
+
+                value_words = [
+                    word
+                    for word in block_words
+                    if abs(((float(word[1]) + float(word[3])) / 2) - label_y) <= 2
+                    and _looks_like_printed_value(str(word[4]))
+                ]
+                cells = []
+                remaining_value_words = list(value_words)
+                for year, header_x, _ in year_headers:
+                    nearby = sorted(
+                        remaining_value_words,
+                        key=lambda word: abs(
+                            ((float(word[0]) + float(word[2])) / 2) - header_x
+                        ),
+                    )
+                    if not nearby:
+                        break
+                    value = nearby[0]
+                    value_x = (float(value[0]) + float(value[2])) / 2
+                    if abs(value_x - header_x) > 30:
+                        break
+                    cells.append((f"{year}-12-31", str(value[4])))
+                    remaining_value_words.remove(value)
+                if len(cells) == len(expected_years):
+                    return tuple(cells)
+    raise RuntimeError(
+        f"Could not spatially reconstruct source row {label_key!r} "
+        f"from pages {pages} of {text_path}"
+    )
+
+
+def apply_source_row_repairs(
+    observations: pd.DataFrame,
+    pdf_path: Path,
+) -> pd.DataFrame:
+    """Repair known text-order shifts using values reread from the source PDF."""
+    repaired = observations.copy()
+    _, _, source_document_id = _text_source(pdf_path)
+    for (company, report_year, statement, label_key), expected_years in (
+        SOURCE_ROW_REPAIRS.items()
+    ):
+        scope = (
+            (repaired["company"] == company)
+            & (repaired["document_id"] == source_document_id)
+            & (repaired["report_year"].astype(int) == report_year)
+            & (repaired["statement"] == statement)
+        )
+        if not scope.any():
+            continue
+        label_keys = repaired["reported_label"].astype(str).map(_correction_key)
+        mask = scope & (label_keys == label_key)
+        matches = repaired.loc[mask]
+        if matches.empty:
+            raise RuntimeError(
+                "Spatial source repair row was not extracted: "
+                f"{company} {report_year} {statement} {label_key!r}"
+            )
+        template = matches.iloc[0].to_dict()
+        cells = _pdf_row_cells(
+            pdf_path,
+            _page_numbers(template["page"]),
+            label_key,
+            expected_years,
+        )
+        replacement = []
+        base_method = re.sub(
+            r"(?:_verified_source_correction|_verified_pdf_spatial_repair)+$",
+            "",
+            str(template["extraction_method"]),
+        )
+        for period_end, raw_value in cells:
+            row = dict(template)
+            row["period_end"] = period_end
+            row["raw_value"] = raw_value
+            row["extraction_method"] = (
+                f"{base_method}_verified_pdf_spatial_repair"
+            )
+            replacement.append(row)
+        repaired = pd.concat(
+            [repaired.loc[~mask], pd.DataFrame(replacement)],
+            ignore_index=True,
+        )
+    return repaired
+
+
 def _left_statement_column(
     pdf_path: Path,
     page_index: int,
@@ -319,7 +519,7 @@ def extract_report(
                     }
                 )
 
-    observations = pd.DataFrame(rows)
+    observations = apply_source_row_repairs(pd.DataFrame(rows), pdf_path)
     if not persist:
         return observations
 

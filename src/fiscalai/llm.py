@@ -105,16 +105,18 @@ def _parse_cached(
     schema: type[ParsedModel],
     cache_root: Path = Path(".cache/llm"),
 ) -> ParsedModel:
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        raise RuntimeError("OPENAI_API_KEY is required for semantic pipeline stages")
-
     model = os.getenv("OPENAI_MODEL", "gpt-5-mini")
     cache_root.mkdir(parents=True, exist_ok=True)
     key = _cache_key(task, model, instructions, payload, schema)
     cache_path = cache_root / f"{key}.json"
     if cache_path.exists():
         return schema.model_validate_json(cache_path.read_text())
+
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError(
+            "OPENAI_API_KEY is required for uncached semantic pipeline stages"
+        )
 
     _consume_budget(cache_root)
     response = OpenAI(api_key=api_key).responses.parse(
